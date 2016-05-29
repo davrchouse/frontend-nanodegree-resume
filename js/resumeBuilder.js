@@ -275,22 +275,7 @@ education.display = function() {
             console.log(formattedClassWithURL);
             $(".education-entry:last").append(formattedClassWithURL);
         };
-
-        // for (image in projects.all[project].images) {
-        //     var formattedProjectImage = HTMLprojectImage.replace("%data%", projects.all[project].images[image]);
-        //     $(".project-entry:last").append(formattedProjectImage);
-        // };
-
-        // for (blah in education.onlineCourses[onlineClass].courses) {
-        //     var formattedProjectImage = HTMLprojectImage.replace("%data%", projects.all[project].images[image]);
-        //     $(".project-entry:last").append(formattedProjectImage);
-        // };
-
-        // for (course in education.onlineCourses.courses) {
-        //     var formattedOnlineIndivClass = HTMLonlineIndivClass.replace("%data%", education.onlineCourses[onlineClass].courses[course]);
-        //     $(".education-entry:last").append(formattedOnlineIndivClass);
-        // };
-        };
+    };
 };
 
 
