@@ -173,6 +173,7 @@ var projects = {
 };
 // add function to projects to display all data to projects section
 projects.display = function() {
+    $("#projects").append(HTMLprojectBreakLine);
     for (project in projects.all) {
         //for each project create a new div with project-entry class
         $("#projects").append(HTMLprojectStart);
@@ -190,7 +191,6 @@ projects.display = function() {
             $(".project-entry:last").append(nextFormattedProjectImage);
         };
         var selectTitle = $(".project-info:last").children(".title");
-        console.log(selectTitle);
         $(selectTitle).attr("href",projects.all[project].url);
         $("#projects").append(HTMLprojectBreakLine);
     };
@@ -220,13 +220,22 @@ var education = {
         {
             "school": "Udacity",
             "title": "Front-End Web Developer Nanodegree",
-            "courses": [
-                "Responsive Web Design Fundamentals",
-                "Intro to HTML and CSS",
-                "Responsive Images",
-                "How to Use Git and Github",
-                "Javascript Basics"
-            ],
+            "courseList":
+                    [   "Responsive Web Design Fundamentals",
+                        "Intro to HTML and CSS",
+                        "Responsive Images",
+                        "How to Use Git and Github",
+                        "Javascript Basics",
+                        "Intro to jQuery"
+                    ],
+            "coureURL": [
+                        "https://www.udacity.com/course/responsive-web-design-fundamentals--ud893",
+                        "https://www.udacity.com/course/intro-to-html-and-css--ud304",
+                        "https://www.udacity.com/course/responsive-images--ud882",
+                        "https://www.udacity.com/course/how-to-use-git-and-github--ud775",
+                        "https://www.udacity.com/course/javascript-basics--ud804",
+                        "https://www.udacity.com/course/intro-to-jquery--ud245"
+                    ],
             "dates": "February 2016 - present",
             "url": "https://www.udacity.com/course/front-end-web-developer-nanodegree--nd001"
         }
@@ -244,9 +253,12 @@ education.display = function() {
         var formattedSchoolLocation = HTMLschoolLocation.replace("%data%", education.schools[school].city);
         var formattedSchoolMajor = HTMLschoolMajor.replace("%data%", education.schools[school].major);
         $(".education-entry:last").append(formattedSchoolNameDegree,formattedSchoolDates,formattedSchoolLocation,formattedSchoolMajor);
+        var selectTitle = $(".education-entry:last").children(".title");
+        $(selectTitle).attr("href",education.schools[school].url);
     };
+    //add an Online Classes header
     $("#education").append(HTMLonlineClasses);
-    //for each school create a new div with education-entry class
+    //for each online School create a new div with all the courses taken
     for (onlineClass in education.onlineCourses) {
         $("#education").append(HTMLschoolStart);
         var formattedOnlineTitle = HTMLonlineTitle.replace("%data%", education.onlineCourses[onlineClass].school);
@@ -254,10 +266,14 @@ education.display = function() {
         var formattedOnlineSchoolTitle = formattedOnlineTitle+formattedOnlineSchool;
         var formattedOnlineDates = HTMLonlineDates.replace("%data%", education.onlineCourses[onlineClass].dates);
         $(".education-entry:last").append(formattedOnlineSchoolTitle,formattedOnlineDates);
+        var selectTitle = $(".education-entry:last").children(".title");
+        $(selectTitle).attr("href",education.onlineCourses[onlineClass].url);
        //add the list of all the courses taken at Udacity for the Front End Dev Nanodegree
-        for (course in education.onlineCourses[onlineClass].courses) {
-            var formattedOnlineIndivClass = HTMLonlineIndivClass.replace("%data%", education.onlineCourses[onlineClass].courses[course]);
-            $(".education-entry:last").append(formattedOnlineIndivClass);
+        for (course in education.onlineCourses[onlineClass].courseList) {
+            var formattedOnlineIndivClass = HTMLonlineIndivClass.replace("%data%", education.onlineCourses[onlineClass].courseList[course]);
+            var formattedClassWithURL = formattedOnlineIndivClass.replace("%link%", education.onlineCourses[onlineClass].coureURL[course]);
+            console.log(formattedClassWithURL);
+            $(".education-entry:last").append(formattedClassWithURL);
         };
 
         // for (image in projects.all[project].images) {

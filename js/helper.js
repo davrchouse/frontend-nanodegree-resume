@@ -45,7 +45,7 @@ var HTMLworkDescription = '<p><br>%data%</p>';
 
 var HTMLprojectStart = '<div class="project-entry flex-box"></div>';
 var HTMLprojectBox = '<div class="project-info"></div>'
-var HTMLprojectTitle = '<a class="title" href="#">%data%</a>';
+var HTMLprojectTitle = '<a class="black-title" href="#">%data%</a>';
 
 var HTMLprojectDates = '<div class="date-text">%data%</div>';
 var HTMLprojectDescription = '<p><br>%data%</p>';
@@ -55,18 +55,18 @@ var HTMLprojectBreakLine = '<div class="breaker brown"><div>';
 
 
 var HTMLschoolStart = '<div class="education-entry"></div>';
-var HTMLschoolName = '<a href="#">%data%';
+var HTMLschoolName = '<a class="title" href="#">%data%';
 var HTMLschoolDegree = ' -- %data%</a>';
 var HTMLschoolDates = '<div class="date-text">%data%</div>';
 var HTMLschoolLocation = '<div class="location-text">%data%</div>';
-var HTMLschoolMajor = '<em><br>Major: %data%</em>';
+var HTMLschoolMajor = '<em class="white-text"><br>Major: %data%</em>';
 
-var HTMLonlineClasses = '<h3>Online Classes</h3>';
-var HTMLonlineTitle = '<a href="#">%data%';
+var HTMLonlineClasses = '<h3 id="onlineHeader">Online Classes</h3>';
+var HTMLonlineTitle = '<a class="title" href="#">%data%';
 var HTMLonlineSchool = ' - %data%</a>';
 var HTMLonlineDates = '<div class="date-text">%data%</div>';
 var HTMLonlineURL = '<br><a href="#">%data%</a>';
-var HTMLonlineIndivClass = '<em><br>%data%</em>';
+var HTMLonlineIndivClass = '<em><a class="white-text subtitle" href="%link%">%data%</a></em>';
 
 var HTMLiconLeft = '<img src="%data%" class="icon-left">'
 var HTMLiconRight = '<img src="%data%" class="icon-right">'
