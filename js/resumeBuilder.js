@@ -101,12 +101,6 @@ var projects = {
             "dates": "May 2015",
             "description": "Developed a personal portfolio page using HTML, CSS, and the Bootstrap framework. The page is fully responsive and works on mobile, tablet, and desktop browsers.",
             "images": ["images/portfolio_pics/full.jpg", "images/portfolio_pics/ipad.jpg", "images/portfolio_pics/mobile.jpg"]
-        },
-       {
-            "title": "Build a Portfolio2",
-            "dates": "May 2015 2",
-            "description": "2 Developed a personal portfolio page using HTML, CSS, and the Bootstrap framework. The page is fully responsive and works on mobile, tablet, and desktop browsers.",
-            "images": ["images/portfolio_pics/full.jpg", "images/portfolio_pics/ipad.jpg", "images/portfolio_pics/mobile.jpg"]
         }
     ]
 };

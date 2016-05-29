@@ -12,6 +12,7 @@ h6 {
   padding:0;
   margin:0;
   font-family: "Lato", sans-serif;
+  box-sizing: border-box;
 }
 
 .clear-fix {
@@ -129,6 +130,14 @@ a {
   background-color: #2E3C3D;
 }
 
+/* initial order and widths*/
+#header { width: 60%; order:0;}
+#workExperience { width: 40%; order:1;}
+#projects { width: 100%; order:2;}
+#education { width: 30%; order:3;}
+#mapDiv { width: 70%; order:4;}
+#lets-connect { width: 100%; order:5;}
+
 #header {
  /*background-color: rgba(18,48,53,.85);
   background-color: #4a4a4a;*/
@@ -141,7 +150,7 @@ a {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
-  padding: 10px;
+  padding: 0;
 }
 
 .center-content {
@@ -212,7 +221,6 @@ span {
 
 #mapDiv {
   height: 400px;
-  width: 100%;
   padding-bottom: 5%;
 }
 
