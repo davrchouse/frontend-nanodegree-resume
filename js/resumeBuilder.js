@@ -3,7 +3,7 @@
 var bio = {
     "name": "David R.C. House",
     "role": "Web Developer",
-    "profile": "After many years as a biologist and a neuroscientist, I am now dedicated to a career in education and technology. I love the ability to develop and communicate ideas, engage students with interactive and visual tools, and to bring excitement and first hand research experience to learning",
+    "profile": "After many years as a biologist and a neuroscientist, I am now dedicated to a career in education and technology. I love the ability to develop and communicate ideas, engage students with interactive and visual tools, and to bring excitement and first hand research experience to learning.",
     "contacts": {
         "mobile": "925.786.4352",
         "email": ["davrchouse@gmail.com","mailto:davrchouse@gmail.com"],
@@ -22,22 +22,41 @@ bio.display = function() {
     var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
     $("#header").prepend(formattedRole);
     $("#header").prepend(formattedName);
+
     //add in contacts info to the top and bottom of the page
     var formattedcontactInfo = HTMLmobile.replace("%data%",bio.contacts.mobile)
     +HTMLemail.replace("%data%",bio.contacts.email[0])
     +HTMLgithub.replace("%data%",bio.contacts.github[0])
     +HTMLlocation.replace("%data%",bio.contacts.loc);
-
     $("#topContacts").append(formattedcontactInfo);
     $("#footerContacts").append(formattedcontactInfo);
     $(".email").attr("href",bio.contacts.email[1]);
     $(".github").attr("href",bio.contacts.github[1]);
+
     //add the formatted bio pic to the header
     var formattedPic = HTMLbioPic.replace("%data%",bio.pic);
     $("#header").append(formattedPic);
-    //add the formatted profile message to the header
+
+    //add the new Profile header and formatted profile message to the header section
+    $("#header").append(HTMLprofileStart);
     var formattedProfile = HTMLwelcomeMsg.replace("%data%", bio.profile);
-    $("#header").append(formattedProfile);
+    $("#profile").append(formattedProfile);
+
+    //make a function to change color of words in the text
+    function changeTextColor(targetElement,textToChange,newColorClass){
+        var oldHTML = $(targetElement).html();
+        console.log(oldHTML);
+        var addTextHTML = '<span class="'+newColorClass+'">'+textToChange+'</span>';
+        var newHTML = oldHTML.replace(textToChange,addTextHTML);
+        console.log(newHTML);
+        $(targetElement).html(newHTML);
+    };
+    changeTextColor(".welcome-message","biologist","blue-text");
+    changeTextColor(".welcome-message","neuroscientist","blue-text");
+    changeTextColor(".welcome-message","education","green-text");
+    changeTextColor(".welcome-message","technology","red-text");
+
+
     //add the formatted skills list to the header
     var skills_length = bio.skills.length;
     if (skills_length > 0) {

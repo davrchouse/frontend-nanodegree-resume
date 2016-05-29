@@ -98,6 +98,7 @@ a {
   font-size: 18px;
   color: white;
   line-height: 28px;
+  padding-left: 100px;
 }
 
 #skills-h3 {
@@ -120,6 +121,24 @@ a {
   color: #fff;
 }
 
+.green-text {
+  color: #419928;
+  /*color: rgba(65,153,40,.75);*/
+  font-weight: bold;
+}
+
+.red-text {
+  color: #CE80A4;
+  /*color: rgba(143,76,104,1);*/
+  font-weight: bold;
+}
+
+.blue-text {
+  color: #2BBDC1;
+/*  color: rgba(25,149,165,.9);*/
+  font-weight: bold;
+}
+
 .gray {
   background-color: #f3f3f3;
   padding-bottom: 10px;
@@ -135,6 +154,15 @@ a {
 #main {
   padding: 2.5% 5%;
 }
+
+#role {
+  padding-left: 20px;
+}
+
+#topContacts {
+  margin-bottom: 20px;
+}
+
 
 /* initial order and widths
 4 main sections*/
@@ -191,6 +219,7 @@ ul {
   padding: 10px;
   width: 200px;
   display: none;
+  margin-right: 20px;
 }
 
 img {
@@ -233,7 +262,8 @@ span {
   .biopic {
     width: 150px;
   }
-  .welcome-message {
+
+#profile {
     display: none;
   }
 }
@@ -253,5 +283,15 @@ span {
   #skills-h3,
   .biopic {
     display: block;
+  }
+}
+
+/* Breakpoint for at 850 pixels for auto margins*/
+@media screen and (min-width: 850px) {
+
+  #main {
+    max-width: 1150px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
