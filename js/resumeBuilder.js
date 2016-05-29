@@ -6,8 +6,8 @@ var bio = {
     "profile": "After many years as a biologist and a neuroscientist, I am now dedicated to a career in education and technology. I love the ability to develop and communicate ideas, engage students with interactive and visual tools, and to bring excitement and first hand research experience to learning",
     "contacts": {
         "mobile": "925.786.4352",
-        "email": "davrchouse@gmail.com",
-        "github": "davrchouse",
+        "email": ["davrchouse@gmail.com","mailto:davrchouse@gmail.com"],
+        "github": ["davrchouse","https://github.com/davrchouse/"],
         "loc": "San Ramon, CA"
         },
     "pic": "images/drch.png",
@@ -24,11 +24,14 @@ bio.display = function() {
     $("#header").prepend(formattedName);
     //add in contacts info to the top and bottom of the page
     var formattedcontactInfo = HTMLmobile.replace("%data%",bio.contacts.mobile)
-    +HTMLemail.replace("%data%",bio.contacts.email)
-    +HTMLgithub.replace("%data%",bio.contacts.github)
+    +HTMLemail.replace("%data%",bio.contacts.email[0])
+    +HTMLgithub.replace("%data%",bio.contacts.github[0])
     +HTMLlocation.replace("%data%",bio.contacts.loc);
+
     $("#topContacts").append(formattedcontactInfo);
     $("#footerContacts").append(formattedcontactInfo);
+    $(".email").attr("href",bio.contacts.email[1]);
+    $(".github").attr("href",bio.contacts.github[1]);
     //add the formatted bio pic to the header
     var formattedPic = HTMLbioPic.replace("%data%",bio.pic);
     $("#header").append(formattedPic);

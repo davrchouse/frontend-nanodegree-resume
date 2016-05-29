@@ -164,6 +164,13 @@ span {
   padding: 5px;
 }
 
+.phone, .email, .github, .location {
+  padding: 5px;
+  margin: 0;
+  display: inline-block;
+  color: white;
+}
+
 #lets-connect {
   text-align: center;
 }
