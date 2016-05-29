@@ -18,7 +18,7 @@ var bio = {
 // add function to bio to display all data to header section
 bio.display = function() {
     //add the name and role to the header
-    var formattedName = HTMLheaderName.replace("%data%", bio.name);
+    var formattedName = HTMLheaderName.replace("%data%", bio.name.toUpperCase());
     var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
     $("#header").prepend(formattedRole);
     $("#header").prepend(formattedName);
