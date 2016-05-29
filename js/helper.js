@@ -33,6 +33,9 @@ var HTMLskills = '<li class="flex-item"><span>%data%</span></li>';
 var HTMLbrownStars = '<span class="brown-star">%data%<span>'
 var HTMLwhiteDots = '<span class="white-dot">%data%<span>'
 
+var HTMLteachStart = '<h2 id="teach-h2">Teaching Subjects</h2><ul id="subjects"></ul>';
+
+
 var HTMLworkStart = '<div class="work-entry"></div>';
 var HTMLworkEmployer = '<a href="#">%data%';
 var HTMLworkTitle = ' - %data%</a>';
@@ -60,7 +63,9 @@ var HTMLonlineDates = '<div class="date-text">%data%</div>';
 var HTMLonlineURL = '<br><a href="#">%data%</a>';
 var HTMLonlineIndivClass = '<em><br>%data%</em>';
 
-var HTMLicon = '<img src="%data%" class="icon">'
+var HTMLiconLeft = '<img src="%data%" class="icon">'
+var HTMLiconRight = '<img src="%data%" class="icon-right">'
+
 
 var internationalizeButton = '<button>Internationalize</button>';
 var googleMap = '<div id="map"></div>';

@@ -14,6 +14,7 @@ h6 {
   font-family: "Lato", sans-serif;
   font-weight: 300;
   box-sizing: border-box;
+  display: block;
 }
 
 .clear-fix {
@@ -38,7 +39,7 @@ h2 {
   text-transform: uppercase;
   font-size: 24px;
   line-height: 29px;
-  padding: 10px;
+/*  padding: 10px;*/
   color: #AA7552;
 }
 
@@ -63,9 +64,8 @@ h5 {
 
 }
 
-.icon {
+.icon{
   height: 40px;
-  float: left;
 }
 
 .date-text {
@@ -191,21 +191,29 @@ a {
    color: #2E3C3D;
 }
 
-/* initial order and widths
-4 main sections*/
+
+/* Skills Section */
+
 #skillSection {
-  width: 100%;
+  width: 50%;
   order:0;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
+  text-align: left;
 }
 
 #skills-h2 {
   padding-top: 24px;
+  padding-bottom: 8px;
+  width: 70%;
 }
 
 #skills li{
   line-height: 28px;
   color: white;
+  width: 100%;
+  float: left;
+  padding-left: 10px;
+
 }
 
 .brown-star {
@@ -218,9 +226,42 @@ a {
   padding:0px;
 }
 
-#projects { width: 100%; order:1;}
-#education { width: 100%; order:2;}
-#mapDiv { width: 100%; order:3;}
+/* Teaching Section */
+
+#teaching {
+  width: 50%;
+  order:1;
+  margin-bottom: 30px;
+  text-align: right;
+}
+
+.icon-right {
+    height: 40px;
+    float: right;
+    margin-left: auto;
+    padding-right: 0;
+}
+
+
+#teach-h2 {
+  line-height: 26px;
+  margin-left: auto;
+  width: 100%;
+
+}
+
+#subjects li{
+  line-height: 28px;
+  color: white;
+  text-align: right;
+  float: right;
+  width: 100%;
+ /* clear:right;*/
+}
+
+#projects { width: 100%; order:2;}
+#education { width: 100%; order:3;}
+#mapDiv { width: 100%; order:4;}
 
 
 

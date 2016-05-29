@@ -12,12 +12,14 @@ var bio = {
         },
     "pic": "images/drch.png",
     "skills": {
-        "skillList": ["Course Development","Exam and Lesson Design","Scientific Writing / Editing","Experimental Design",
-            "Visual Presentation","Analytic Fundamentals","Breadth of Scientific Knowledge","Illustrator & Photoshop",
-            "Python","MATLAB",
-            "HTML &nbsp; &loz; &loz; &loz; &bull; &bull;","CSS &nbsp; &loz; &loz; &loz; &bull; &bull;",
-            "Javascript &nbsp; &loz; &loz; &bull; &bull; &bull;"],
+        "skillList": ["Course Development","Exam and Lesson Design","Scientific Writing / Editing",
+            "Experimental Design","Visual Presentation","Analytic Fundamentals","Breadth of Scientific Knowledge",
+            "Illustrator & Photoshop","Python","MATLAB","HTML","CSS","Javascript"],
         "icon": "images/icons/skills_icon.svg"
+        },
+    "teaching": {
+        "subjects": ["Biology", "Molecular & Cell Biology", "Chemistry", "Neurobiology", "Precalculus",
+            "Geometry", "Algebra", "Trigonometry", "Cognitive Psychology", "Elementary Math & Science"]
     }
 };
 // add function to bio to display all data to header section
@@ -62,12 +64,15 @@ bio.display = function() {
     changeText(".welcome-message","technology","red-text");
 
 
+
 //add the skills icon to the new skillSection
-    var formattedSkillsIcon = HTMLicon.replace("%data%", bio.skills.icon);
-    $("#skillSection").append(formattedSkillsIcon);
-//add the formatted skills list to the new skillSection
+    var formattedSkillsIcon = HTMLiconLeft.replace("%data%", bio.skills.icon);
+    $("#skillHeader").append(formattedSkillsIcon);
+    //add the formatted skills header and empty list to the new skillSection
     var skills_length = bio.skills.skillList.length;
-    $("#skillSection").append(HTMLskillsStart);
+    $("#skillHeader").append(HTMLskillsStart);
+
+    //format and append the skills into the skillList
     for (var i = 0; i < skills_length; i++) {
         var formattedSkill = HTMLskills.replace("%data%", bio.skills.skillList[i]);
         $("#skills").append(formattedSkill);
@@ -89,6 +94,32 @@ bio.display = function() {
     addStars("HTML",formmattedThreeStars);
     addStars("CSS",formmattedThreeStars);
     addStars("Javascript",formmattedTwoStars);
+
+// //add the teaching header and icon and empty subjects list into the new teaching section
+//     var formattedTeachStart = HTMLteachStart.replace("%data%", bio.skills.icon);
+//     $("#teachingHeader").append(formattedTeachStart);
+
+//     var subjects_length = bio.teaching.subjects.length;
+// //format and append the teaching subjects into the subject list
+//     for (var i = 0; i < subjects_length; i++) {
+//         var formattedSkill = HTMLskills.replace("%data%", bio.teaching.subjects[i]);
+//         $("#subjects").append(formattedSkill);
+//     };
+
+//add the teaching header and icon and empty subjects list into the new teaching section
+var formattedTeachIcon = HTMLiconRight.replace("%data%", bio.skills.icon);
+    $("#teachingHeader").append(formattedTeachIcon);    
+    var subjects_length = bio.teaching.subjects.length;
+    $("#teachingHeader").append(HTMLteachStart);
+
+   //format and append the teaching subjects into the subject list
+    for (var i = 0; i < subjects_length; i++) {
+        var formattedSkill = HTMLskills.replace("%data%", bio.teaching.subjects[i]);
+        $("#subjects").append(formattedSkill);
+    };
+
+
+
 }
 
 
