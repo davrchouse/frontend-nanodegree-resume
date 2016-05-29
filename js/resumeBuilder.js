@@ -97,13 +97,13 @@ var projects = {
             "title": "Build a Portfolio",
             "dates": "May 2015",
             "description": "Developed a personal portfolio page using HTML, CSS, and the Bootstrap framework. The page is fully responsive and works on mobile, tablet, and desktop browsers.",
-            "images": ["images/portfolio_pics/full.jpg", "images/portfolio_pics/ipad.jpg", "images/portfolio_pics/mobile.jpg"]    
+            "images": ["images/portfolio_pics/full.jpg", "images/portfolio_pics/ipad.jpg", "images/portfolio_pics/mobile.jpg"]
         },
        {
             "title": "Build a Portfolio2",
             "dates": "May 2015 2",
             "description": "2 Developed a personal portfolio page using HTML, CSS, and the Bootstrap framework. The page is fully responsive and works on mobile, tablet, and desktop browsers.",
-            "images": ["images/portfolio_pics/full.jpg", "images/portfolio_pics/ipad.jpg", "images/portfolio_pics/mobile.jpg"]    
+            "images": ["images/portfolio_pics/full.jpg", "images/portfolio_pics/ipad.jpg", "images/portfolio_pics/mobile.jpg"]
         }
     ]
 };
@@ -163,32 +163,29 @@ var education = {
 };
 // add function ot education  to display all date to the education section
 education.display = function() {
-    // for (school in education.schools) {
-    // //for each school create a new div with education-entry class
-    //     $("#education").append(HTMLschoolStart);
-    //     var formattedSchoolName = HTMLschoolName.replace("%data%", education.schools[school].name);
-    //     var formattedSchoolDegree = HTMLschoolDegree.replace("%data%", education.schools[school].degree);
-    //     var formattedSchoolNameDegree = formattedSchoolName+formattedSchoolDegree;
-    //     var formattedSchoolDates = HTMLschoolDates.replace("%data%", education.schools[school].years);
-    //     var formattedSchoolLocation = HTMLschoolLocation.replace("%data%", education.schools[school].city);
-    //     var formattedSchoolMajor = HTMLschoolMajor.replace("%data%", education.schools[school].major);
-    //     $(".education-entry:last").append(formattedSchoolNameDegree,formattedSchoolDates,formattedSchoolLocation,formattedSchoolMajor);
-    // };
-    $("#education").append(HTMLonlineClasses);
-    for (onlineClass in education.onlineCourses) {
+    for (school in education.schools) {
     //for each school create a new div with education-entry class
+        $("#education").append(HTMLschoolStart);
+        var formattedSchoolName = HTMLschoolName.replace("%data%", education.schools[school].name);
+        var formattedSchoolDegree = HTMLschoolDegree.replace("%data%", education.schools[school].degree);
+        var formattedSchoolNameDegree = formattedSchoolName+formattedSchoolDegree;
+        var formattedSchoolDates = HTMLschoolDates.replace("%data%", education.schools[school].years);
+        var formattedSchoolLocation = HTMLschoolLocation.replace("%data%", education.schools[school].city);
+        var formattedSchoolMajor = HTMLschoolMajor.replace("%data%", education.schools[school].major);
+        $(".education-entry:last").append(formattedSchoolNameDegree,formattedSchoolDates,formattedSchoolLocation,formattedSchoolMajor);
+    };
+    $("#education").append(HTMLonlineClasses);
+    //for each school create a new div with education-entry class
+    for (onlineClass in education.onlineCourses) {
         $("#education").append(HTMLschoolStart);
         var formattedOnlineTitle = HTMLonlineTitle.replace("%data%", education.onlineCourses[onlineClass].school);
         var formattedOnlineSchool = HTMLonlineSchool.replace("%data%", education.onlineCourses[onlineClass].title);
         var formattedOnlineSchoolTitle = formattedOnlineTitle+formattedOnlineSchool;
         var formattedOnlineDates = HTMLonlineDates.replace("%data%", education.onlineCourses[onlineClass].dates);
         $(".education-entry:last").append(formattedOnlineSchoolTitle,formattedOnlineDates);
-        // var formattedOnlineIndivClass = HTMLonlineIndivClass.replace("%data%", education.onlineCourses[onlineClass].courses[2]);
-        // $(".education-entry:last").forEach().append.HTMLonlineIndivClass.replace("%data%", education.onlineCourses[onlineClass].courses);
-
-        for (blah in education.onlineCourses[onlineClass].courses) {
-            var formattedOnlineIndivClass = HTMLonlineIndivClass.replace("%data%", education.onlineCourses[onlineClass].courses[blah]);
-            console.log(formattedOnlineIndivClass);
+       //add the list of all the courses taken at Udacity for the Front End Dev Nanodegree
+        for (course in education.onlineCourses[onlineClass].courses) {
+            var formattedOnlineIndivClass = HTMLonlineIndivClass.replace("%data%", education.onlineCourses[onlineClass].courses[course]);
             $(".education-entry:last").append(formattedOnlineIndivClass);
         };
 
