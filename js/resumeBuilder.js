@@ -63,9 +63,7 @@ bio.display = function() {
     changeText(".welcome-message","education","green-text");
     changeText(".welcome-message","technology","red-text");
 
-
-
-//add the skills icon to the new skillSection
+    //add the skills icon to the new skillSection
     var formattedSkillsIcon = HTMLiconLeft.replace("%data%", bio.skills.icon);
     $("#skillHeader").append(formattedSkillsIcon);
     //add the formatted skills header and empty list to the new skillSection
@@ -95,19 +93,8 @@ bio.display = function() {
     addStars("CSS",formmattedThreeStars);
     addStars("Javascript",formmattedTwoStars);
 
-// //add the teaching header and icon and empty subjects list into the new teaching section
-//     var formattedTeachStart = HTMLteachStart.replace("%data%", bio.skills.icon);
-//     $("#teachingHeader").append(formattedTeachStart);
-
-//     var subjects_length = bio.teaching.subjects.length;
-// //format and append the teaching subjects into the subject list
-//     for (var i = 0; i < subjects_length; i++) {
-//         var formattedSkill = HTMLskills.replace("%data%", bio.teaching.subjects[i]);
-//         $("#subjects").append(formattedSkill);
-//     };
-
-//add the teaching header and icon and empty subjects list into the new teaching section
-var formattedTeachIcon = HTMLiconRight.replace("%data%", bio.skills.icon);
+    //add the teaching header and icon and empty subjects list into the new teaching section
+    var formattedTeachIcon = HTMLiconRight.replace("%data%", bio.skills.icon);
     $("#teachingHeader").append(formattedTeachIcon);    
     var subjects_length = bio.teaching.subjects.length;
     $("#teachingHeader").append(HTMLteachStart);
@@ -117,9 +104,6 @@ var formattedTeachIcon = HTMLiconRight.replace("%data%", bio.skills.icon);
         var formattedSkill = HTMLskills.replace("%data%", bio.teaching.subjects[i]);
         $("#subjects").append(formattedSkill);
     };
-
-
-
 }
 
 
@@ -175,7 +159,7 @@ var projects = {
             "title": "Build a Portfolio",
             "dates": "May 2015",
             "description": "Developed a personal portfolio page using HTML, CSS, and the Bootstrap framework. The page is fully responsive and works on mobile, tablet, and desktop browsers.",
-            "images": ["images/portfolio_pics/full.jpg", "images/portfolio_pics/ipad.jpg", "images/portfolio_pics/mobile.jpg"]
+            "images": ["images/portfolio_pics/full.jpg"]
         }
     ]
 };
@@ -184,11 +168,13 @@ projects.display = function() {
     for (project in projects.all) {
         //for each project create a new div with project-entry class
         $("#projects").append(HTMLprojectStart);
+        $(".project-entry:last").append(HTMLprojectBox);
+
         //format and append the project title, dates, description, and images
         var formattedProjectTitle = HTMLprojectTitle.replace("%data%", projects.all[project].title);
         var formattedProjectDates = HTMLprojectDates.replace("%data%", projects.all[project].dates);
         var formattedProjectDescription = HTMLprojectDescription.replace("%data%", projects.all[project].description);
-        $(".project-entry:last").append(formattedProjectTitle,formattedProjectDates,formattedProjectDescription);
+        $(".project-info:last").append(formattedProjectTitle,formattedProjectDates,formattedProjectDescription);
         //format image and append all the images
         for (image in projects.all[project].images) {
             var formattedProjectImage = HTMLprojectImage.replace("%data%", projects.all[project].images[image]);
