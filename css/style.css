@@ -12,6 +12,7 @@ h6 {
   padding:0;
   margin:0;
   font-family: "Lato", sans-serif;
+  font-weight: 300;
   box-sizing: border-box;
 }
 
@@ -36,7 +37,6 @@ h2 {
   font-weight: bold;
   text-transform: uppercase;
   font-size: 24px;
-  color: rgba(18,48,53,.9);
   line-height: 29px;
   padding: 10px;
   color: #AA7552;
@@ -55,7 +55,7 @@ h4 {
   line-height: 17px;
 }
 
-h2,
+
 h3,
 h4,
 h5 {
@@ -63,6 +63,10 @@ h5 {
 
 }
 
+.icon {
+  height: 40px;
+  float: left;
+}
 
 .date-text {
   font-style: italic;
@@ -99,11 +103,6 @@ a {
   color: white;
   line-height: 28px;
   padding-left: 100px;
-}
-
-#skills-h3 {
-  color: #AA7552;
-  display: none;
 }
 
 .brown {
@@ -167,12 +166,22 @@ a {
 /* initial order and widths
 4 main sections*/
 
-#header { width: 100%; order:0;}
-#content { width: 60%; order:1;}
+#header {
+  width: 100%;
+  order:0;
+}
+
+#content {
+  width: 50%;
+  order:1;
+  margin-right: 5%;
+}
+
 #workExperience {
-  width: 40%;
+  width: 45%;
   order:2;
 }
+
 #lets-connect {
   width: 100%;
   order:3;
@@ -184,7 +193,31 @@ a {
 
 /* initial order and widths
 4 main sections*/
-#bio { width: 100%; order:0;}
+#skillSection {
+  width: 100%;
+  order:0;
+  margin-bottom: 20px;
+}
+
+#skills-h2 {
+  padding-top: 24px;
+}
+
+#skills li{
+  line-height: 28px;
+  color: white;
+}
+
+.brown-star {
+  color: #AA7552;
+  padding:0px;
+}
+
+.white-dot {
+  color: white;
+  padding:0px;
+}
+
 #projects { width: 100%; order:1;}
 #education { width: 100%; order:2;}
 #mapDiv { width: 100%; order:3;}
@@ -195,6 +228,7 @@ a {
  /*background-color: rgba(18,48,53,.85);
   background-color: #4a4a4a;*/
   background-color: #2E3C3D;
+  margin-bottom: 30px;
 }
 
 .flex-box {

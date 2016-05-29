@@ -11,9 +11,14 @@ var bio = {
         "loc": "San Ramon, CA"
         },
     "pic": "images/drch.png",
-    "skills": ["Course Development","Exam and Lesson Design","Scientific Writing / Editing","Experimental Design",
+    "skills": {
+        "skillList": ["Course Development","Exam and Lesson Design","Scientific Writing / Editing","Experimental Design",
             "Visual Presentation","Analytic Fundamentals","Breadth of Scientific Knowledge","Illustrator & Photoshop",
-            "Python","MATLAB","HTML","CSS", "Javascript"]
+            "Python","MATLAB",
+            "HTML &nbsp; &loz; &loz; &loz; &bull; &bull;","CSS &nbsp; &loz; &loz; &loz; &bull; &bull;",
+            "Javascript &nbsp; &loz; &loz; &bull; &bull; &bull;"],
+        "icon": "images/icons/skills_icon.svg"
+    }
 };
 // add function to bio to display all data to header section
 bio.display = function() {
@@ -43,30 +48,50 @@ bio.display = function() {
     $("#profile").append(formattedProfile);
 
     //make a function to change color of words in the text
-    function changeTextColor(targetElement,textToChange,newColorClass){
+    function changeText(targetElement,textToChange,newClass){
         var oldHTML = $(targetElement).html();
-        console.log(oldHTML);
-        var addTextHTML = '<span class="'+newColorClass+'">'+textToChange+'</span>';
+        //console.log(oldHTML);
+        var addTextHTML = '<span class="'+newClass+'">'+textToChange+'</span>';
         var newHTML = oldHTML.replace(textToChange,addTextHTML);
-        console.log(newHTML);
-        $(targetElement).html(newHTML);
+        //console.log(newHTML);
+        $(targetElement).html(newHTML)
     };
-    changeTextColor(".welcome-message","biologist","blue-text");
-    changeTextColor(".welcome-message","neuroscientist","blue-text");
-    changeTextColor(".welcome-message","education","green-text");
-    changeTextColor(".welcome-message","technology","red-text");
+    changeText(".welcome-message","biologist","blue-text");
+    changeText(".welcome-message","neuroscientist","blue-text");
+    changeText(".welcome-message","education","green-text");
+    changeText(".welcome-message","technology","red-text");
 
 
-    //add the formatted skills list to the header
-    var skills_length = bio.skills.length;
-    if (skills_length > 0) {
-        $("#bio").append(HTMLskillsStart);
-        for (var i = 0; i < skills_length; i++) {
-            var formattedSkill = HTMLskills.replace("%data%", bio.skills[i]);
-            $("#skills").append(formattedSkill);
-        };
+//add the skills icon to the new skillSection
+    var formattedSkillsIcon = HTMLicon.replace("%data%", bio.skills.icon);
+    $("#skillSection").append(formattedSkillsIcon);
+//add the formatted skills list to the new skillSection
+    var skills_length = bio.skills.skillList.length;
+    $("#skillSection").append(HTMLskillsStart);
+    for (var i = 0; i < skills_length; i++) {
+        var formattedSkill = HTMLskills.replace("%data%", bio.skills.skillList[i]);
+        $("#skills").append(formattedSkill);
     };
+    //add a rating system of diamonds for the programming proficiency levels
+    var starsTwo = "&nbsp; &loz; &loz;"
+    var starsThree = "&nbsp; &loz; &loz; &loz;"
+    var dotsThree = "&bull; &bull; &bull;"
+    var dotsTwo = "&bull; &bull;"
+    var formmattedTwoStars = HTMLbrownStars.replace("%data%", starsTwo)+HTMLwhiteDots.replace("%data%", dotsThree);
+    var formmattedThreeStars = HTMLbrownStars.replace("%data%", starsThree)+HTMLwhiteDots.replace("%data%", dotsTwo);
+    function addStars (textAddingTo,starNumber) {
+        var formatText = "span:contains('%data%')";
+        var selectText =formatText.replace("%data%",textAddingTo);
+        $(selectText).html(textAddingTo+starNumber);
+    }
+    addStars("Python",formmattedTwoStars);
+    addStars("MATLAB",formmattedTwoStars);
+    addStars("HTML",formmattedThreeStars);
+    addStars("CSS",formmattedThreeStars);
+    addStars("Javascript",formmattedTwoStars);
 }
+
+
 
 // -----Work object for each job (employer, title, dates, description, and location)
 var work = {
