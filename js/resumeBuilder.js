@@ -41,7 +41,7 @@ bio.display = function() {
     //add the formatted skills list to the header
     var skills_length = bio.skills.length;
     if (skills_length > 0) {
-        $("#header").append(HTMLskillsStart);
+        $("#bio").append(HTMLskillsStart);
         for (var i = 0; i < skills_length; i++) {
             var formattedSkill = HTMLskills.replace("%data%", bio.skills[i]);
             $("#skills").append(formattedSkill);

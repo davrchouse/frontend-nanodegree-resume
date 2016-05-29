@@ -34,10 +34,12 @@ h1 {
 
 h2 {
   font-weight: bold;
+  text-transform: uppercase;
   font-size: 24px;
   color: rgba(18,48,53,.9);
   line-height: 29px;
   padding: 10px;
+  color: #AA7552;
 }
 
 h3 {
@@ -130,13 +132,36 @@ a {
   background-color: #2E3C3D;
 }
 
-/* initial order and widths*/
-#header { width: 60%; order:0;}
-#workExperience { width: 40%; order:1;}
-#projects { width: 100%; order:2;}
-#education { width: 30%; order:3;}
-#mapDiv { width: 70%; order:4;}
-#lets-connect { width: 100%; order:5;}
+#main {
+  padding: 2.5% 5%;
+}
+
+/* initial order and widths
+4 main sections*/
+
+#header { width: 100%; order:0;}
+#content { width: 60%; order:1;}
+#workExperience {
+  width: 40%;
+  order:2;
+}
+#lets-connect {
+  width: 100%;
+  order:3;
+ }
+
+.connect {
+   color: #2E3C3D;
+}
+
+/* initial order and widths
+4 main sections*/
+#bio { width: 100%; order:0;}
+#projects { width: 100%; order:1;}
+#education { width: 100%; order:2;}
+#mapDiv { width: 100%; order:3;}
+
+
 
 #header {
  /*background-color: rgba(18,48,53,.85);
@@ -220,8 +245,8 @@ span {
 }
 
 #mapDiv {
-  height: 400px;
-  padding-bottom: 5%;
+  height: 300px;
+  padding-bottom: 13%;
 }
 
 @media only screen and (min-width: 750px) {
