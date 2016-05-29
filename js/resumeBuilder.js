@@ -19,7 +19,8 @@ var bio = {
         },
     "teaching": {
         "subjects": ["Biology", "Molecular & Cell Biology", "Chemistry", "Neurobiology", "Precalculus",
-            "Geometry", "Algebra", "Trigonometry", "Cognitive Psychology", "Elementary Math & Science"]
+            "Geometry", "Algebra", "Trigonometry", "Cognitive Psychology", "Elementary Math & Science"],
+        "icon": "images/icons/apple_icon.svg"
     }
 };
 // add function to bio to display all data to header section
@@ -94,8 +95,8 @@ bio.display = function() {
     addStars("Javascript",formmattedTwoStars);
 
     //add the teaching header and icon and empty subjects list into the new teaching section
-    var formattedTeachIcon = HTMLiconRight.replace("%data%", bio.skills.icon);
-    $("#teachingHeader").append(formattedTeachIcon);    
+    var formattedTeachIcon = HTMLiconRight.replace("%data%", bio.teaching.icon);
+    $("#teachingHeader").append(formattedTeachIcon);
     var subjects_length = bio.teaching.subjects.length;
     $("#teachingHeader").append(HTMLteachStart);
 
@@ -132,10 +133,14 @@ var work = {
             "dates": "2010 - 2011",
             "description": "Discovered mechanisms for how sensory neurons process, learn, and adapt to experience."
         }
-    ]
+    ],
+    "icon": "images/icons/experience_icon.svg"
 };
 // add function to work object to display all data to work section
 work.display = function() {
+    var formattedIcon = HTMLiconLeft.replace("%data%", work.icon);
+    var addToElement = $("#workExperience").children(".projectHeader");
+    $(addToElement).prepend(formattedIcon);
     for (job in work.jobs) {
         //for each job create a new div with work-entry class
         $("#workExperience").append(HTMLworkStart);
@@ -148,7 +153,8 @@ work.display = function() {
         var formattedJobLocation = HTMLworkLocation.replace("%data%", work.jobs[job].location);
         var formattedJobDescription = HTMLworkDescription.replace("%data%", work.jobs[job].description);
         //append all formatted items to the last added work-entry div
-        $(".work-entry:last").append(formattedEmployerTitle,formattedJobDates,formattedJobLocation,formattedJobDescription);
+        $(".work-entry:last").append(formattedEmployerTitle,formattedJobDates,formattedJobLocation,
+            formattedJobDescription);
     };
 };
 
@@ -239,10 +245,19 @@ var education = {
             "dates": "February 2016 - present",
             "url": "https://www.udacity.com/course/front-end-web-developer-nanodegree--nd001"
         }
-    ]
+    ],
+    "icon": "images/icons/education_icon.svg"
 };
 // add function ot education  to display all date to the education section
 education.display = function() {
+
+     var formattedIcon = HTMLiconLeft.replace("%data%", education.icon);
+    var addToElement = $("#education");
+    $(addToElement).prepend(formattedIcon);
+    var test = $("#education").children(".icon-left").addClass("ed_icon");
+    console.log(test);
+
+
     for (school in education.schools) {
     //for each school create a new div with education-entry class
         $("#education").append(HTMLschoolStart);
@@ -272,7 +287,6 @@ education.display = function() {
         for (course in education.onlineCourses[onlineClass].courseList) {
             var formattedOnlineIndivClass = HTMLonlineIndivClass.replace("%data%", education.onlineCourses[onlineClass].courseList[course]);
             var formattedClassWithURL = formattedOnlineIndivClass.replace("%link%", education.onlineCourses[onlineClass].coureURL[course]);
-            console.log(formattedClassWithURL);
             $(".education-entry:last").append(formattedClassWithURL);
         };
     };
@@ -315,4 +329,4 @@ education.display();
 // formatting and appending each project
 
 
-$("#mapDiv").append(googleMap);
+    $("#mapDiv").append(googleMap);

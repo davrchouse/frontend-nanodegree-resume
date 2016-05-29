@@ -29,7 +29,7 @@ var HTMLwelcomeMsg = '<p class="welcome-message">%data%</p>';
 var HTMLblueText = '<span class="blue">%data%</span>'
 
 var HTMLskillsStart = '<h2 id="skills-h2">Skills</h2><ul id="skills"></ul>';
-var HTMLskills = '<li class="flex-item"><span>%data%</span></li>';
+var HTMLskills = '<li class="flex-item"><span class="right">%data%</span></li>';
 var HTMLbrownStars = '<span class="brown-star">%data%<span>'
 var HTMLwhiteDots = '<span class="white-dot">%data%<span>'
 
