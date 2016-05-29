@@ -160,6 +160,12 @@ var projects = {
             "dates": "May 2015",
             "description": "Developed a personal portfolio page using HTML, CSS, and the Bootstrap framework. The page is fully responsive and works on mobile, tablet, and desktop browsers.",
             "images": ["images/portfolio_pics/full.jpg"]
+        },
+        {
+            "title": "Online Resume",
+            "dates": "May 2015",
+            "description": "Customized an online resume using Javascript, jQuery,and by creating  a personal portfolio page using HTML, CSS, and the Bootstrap framework. The page is fully responsive and works on mobile, tablet, and desktop browsers.",
+            "images": ["images/portfolio_pics/full.jpg"]
         }
     ]
 };
@@ -180,6 +186,7 @@ projects.display = function() {
             var formattedProjectImage = HTMLprojectImage.replace("%data%", projects.all[project].images[image]);
             $(".project-entry:last").append(formattedProjectImage);
         };
+        $("#projects").append(HTMLprojectBreakLine);
     };
 };
 // -----Projects object with personal projects

@@ -50,6 +50,9 @@ var HTMLprojectTitle = '<a href="#">%data%</a>';
 var HTMLprojectDates = '<div class="date-text">%data%</div>';
 var HTMLprojectDescription = '<p><br>%data%</p>';
 var HTMLprojectImage = '<div class="project-border flex-box"><img src="%data%" class="project-image"><div>';
+var HTMLprojectBreakLine = '<div class="breaker brown"><div>';
+
+
 
 var HTMLschoolStart = '<div class="education-entry"></div>';
 var HTMLschoolName = '<a href="#">%data%';
