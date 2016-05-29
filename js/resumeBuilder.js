@@ -159,13 +159,15 @@ var projects = {
             "title": "Build a Portfolio",
             "dates": "May 2015",
             "description": "Developed a personal portfolio page using HTML, CSS, and the Bootstrap framework. The page is fully responsive and works on mobile, tablet, and desktop browsers.",
-            "images": ["images/portfolio_pics/full.jpg"]
+            "images": ["images/portfolio_pics/full.jpg"],
+            "url": "https://github.com/davrchouse/portfolio_project"
         },
         {
             "title": "Online Resume",
             "dates": "May 2015",
-            "description": "Customized an online resume using Javascript, jQuery,and by creating  a personal portfolio page using HTML, CSS, and the Bootstrap framework. The page is fully responsive and works on mobile, tablet, and desktop browsers.",
-            "images": ["images/portfolio_pics/full.jpg"]
+            "description": "Customized an online resume by using Javascript, jQuery, CSS, and HTML; and wrote functions for interactive page events. The page is responsive and works on mobile, tablet, and desktop browsers.",
+            "images": ["images/portfolio_pics/full.jpg"],
+            "url": "https://github.com/davrchouse/frontend-nanodegree-resume"
         }
     ]
 };
@@ -184,8 +186,12 @@ projects.display = function() {
         //format image and append all the images
         for (image in projects.all[project].images) {
             var formattedProjectImage = HTMLprojectImage.replace("%data%", projects.all[project].images[image]);
-            $(".project-entry:last").append(formattedProjectImage);
+            var nextFormattedProjectImage = formattedProjectImage.replace("%link%", projects.all[project].url);
+            $(".project-entry:last").append(nextFormattedProjectImage);
         };
+        var selectTitle = $(".project-info:last").children(".title");
+        console.log(selectTitle);
+        $(selectTitle).attr("href",projects.all[project].url);
         $("#projects").append(HTMLprojectBreakLine);
     };
 };

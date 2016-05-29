@@ -45,11 +45,11 @@ var HTMLworkDescription = '<p><br>%data%</p>';
 
 var HTMLprojectStart = '<div class="project-entry flex-box"></div>';
 var HTMLprojectBox = '<div class="project-info"></div>'
-var HTMLprojectTitle = '<a href="#">%data%</a>';
+var HTMLprojectTitle = '<a class="title" href="#">%data%</a>';
 
 var HTMLprojectDates = '<div class="date-text">%data%</div>';
 var HTMLprojectDescription = '<p><br>%data%</p>';
-var HTMLprojectImage = '<div class="project-border flex-box"><img src="%data%" class="project-image"><div>';
+var HTMLprojectImage = '<div class="project-border flex-box"><a href="%link%"><img src="%data%" class="project-image"></a><div>';
 var HTMLprojectBreakLine = '<div class="breaker brown"><div>';
 
 
@@ -68,7 +68,7 @@ var HTMLonlineDates = '<div class="date-text">%data%</div>';
 var HTMLonlineURL = '<br><a href="#">%data%</a>';
 var HTMLonlineIndivClass = '<em><br>%data%</em>';
 
-var HTMLiconLeft = '<img src="%data%" class="icon">'
+var HTMLiconLeft = '<img src="%data%" class="icon-left">'
 var HTMLiconRight = '<img src="%data%" class="icon-right">'
 
 

@@ -58,10 +58,6 @@ h5 {
 
 }
 
-.icon{
-  height: 40px;
-}
-
 .date-text {
   font-style: italic;
   font-size: 14px;
@@ -233,7 +229,14 @@ a {
     height: 40px;
     float: right;
     margin-left: auto;
+    padding: 10px;
     padding-right: 0;
+
+}
+
+.icon-left {
+    height: 40px;
+    padding: 10px;
 }
 
 
@@ -290,6 +293,11 @@ a {
   order:0;
 }
 
+.title {
+  font-size: 20px;
+  color: #2BBDC1;
+}
+
 div.project-border {
   width: 50%;
   background-color: #AA7552;
@@ -310,7 +318,15 @@ div.project-border {
   height: 10px;
 }
 
-#education { width: 100%; order:3;}
+/* Education Section */
+
+#education {
+  width: 100%;
+  background-color: #2E3C3D;
+  order:3;}
+
+/* Map Section */
+
 #mapDiv { width: 100%; order:4;}
 
 
@@ -345,10 +361,6 @@ ul {
   width: 200px;
   display: none;
   margin-right: 20px;
-}
-
-img {
-  padding: 10px;
 }
 
 span {
