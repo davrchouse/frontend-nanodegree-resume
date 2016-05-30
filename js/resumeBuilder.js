@@ -144,20 +144,31 @@ work.display = function() {
     $(addToElement).prepend(formattedIcon);
     for (job in work.jobs) {
         //for each job create a new div with work-entry class
-        $("#workExperience").append(HTMLworkStart);
+        var formattedWorkDiv = HTMLworkStart.replace("#num#", job);
+        $("#workExperience").append(formattedWorkDiv);
         //format, then concat employer and title
         var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
         var formattedTitle = HTMLworkTitle.replace("%data%", work.jobs[job].title);
-        var formattedEmployerTitle = formattedEmployer+formattedTitle;
-        //format work dates, location, and description
         var formattedJobDates = HTMLworkDates.replace("%data%", work.jobs[job].dates);
         var formattedJobLocation = HTMLworkLocation.replace("%data%", work.jobs[job].location);
-        var formattedJobDescription = HTMLworkDescription.replace("%data%", work.jobs[job].description);
+        var formattedJobInfo = formattedEmployer+formattedTitle+formattedJobDates+formattedJobLocation;
+        //format work dates, location, and description
+        var formattedJobDescription1 = HTMLworkDescription1.replace("%data%", work.jobs[job].description);
+        var formattedJobDescription2 = HTMLworkDescription2.replace("%data%", work.jobs[job].description);
+        var formattedJobDescription3 = HTMLworkDescription3.replace("%data%", work.jobs[job].description);
         //append all formatted items to the last added work-entry div
-        $(".work-entry:last").append(formattedEmployerTitle,formattedJobDates,formattedJobLocation,
-            formattedJobDescription);
+        var selector = "#work"+job;
+        $(selector).children('#leftCol').append(formattedJobInfo);
+        $(selector).children('#leftCol').append(formattedJobDescription1);
+        $(selector).children('#rightCol').append(formattedJobDescription2);
+        $(selector).children('#rightCol').append(formattedJobDescription3);
     };
 };
+
+
+
+
+
 
 // -----Projects object with personal projects
 var projects = {

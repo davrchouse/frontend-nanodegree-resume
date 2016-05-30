@@ -37,15 +37,21 @@ var HTMLwhiteDots = '<span class="white-dot">%data%<span>'
 var HTMLteachStart = '<h2 id="teach-h2">Teaching Subjects</h2><ul id="subjects"></ul>';
 
 
-var HTMLworkStart = '<div class="work-entry"></div>';
-var HTMLworkEmployer = '<a href="#">%data%';
+var HTMLworkStart = '<div id="work#num#" class="flex-box gray"><div id="leftCol" class="flex-box"></div><div id="separator" class="brown"></div><div id="rightCol" class="flex-box"></div></div>';
+var HTMLworkEmployer = '<div class="work-entry dark-gray round"><a href="#">%data%';
 var HTMLworkTitle = ' - %data%</a>';
 var HTMLworkDates = '<div class="date-text">%data%</div>';
-var HTMLworkLocation = '<div class="location-text">%data%</div>';
-var HTMLworkDescription = '<p><br>%data%</p>';
+var HTMLworkLocation = '<div class="location-text">%data%</div></div>';
+var HTMLworkDescription1 = '<div class="green round">%data%</div>';
+var HTMLworkDescription2 = '<div class="red round">%data%</div>';
+var HTMLworkDescription3 = '<div class="blue round">%data%</div>';
+
+
+
+
 
 var HTMLprojectStart = '<div class="project-entry flex-box"></div>';
-var HTMLprojectBox = '<div class="project-info"></div>'
+var HTMLprojectBox = '<div class="project-info"></div>';
 var HTMLprojectTitle = '<a class="black-title" href="#">%data%</a>';
 
 var HTMLprojectDates = '<div class="date-text">%data%</div>';
