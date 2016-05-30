@@ -15,6 +15,7 @@ h6 {
   font-weight: 300;
   box-sizing: border-box;
   display: block;
+  z-index: 1;
 }
 
 .clear-fix {
@@ -143,6 +144,7 @@ span {
 .white-title {
   color: #fff;
   font-size: 16px;
+  text-align: center;
 }
 
 .green-text {
@@ -467,8 +469,6 @@ div.project-border {
   font-style: italic;
   font-size: 14px;
   color: #999;
-  line-height: 16px;
-  width: 100%;
 /*  text-align: center;
   display: inline-block;*/
 }
@@ -478,6 +478,8 @@ div.project-border {
   font-size: 14px;
   color: #999;
   line-height: 16px;
+  width: 100%;
+  text-align: center;
 }
 
 
@@ -535,19 +537,128 @@ try animate
 #timeline {
   width: 100%;
   margin-bottom: 30px;
+  padding: 2.5%;
 }
 
- div.blocks {
-    position: relative;
-/*    left: 50px;*/
-    width: 90px;
-    height: 90px;
-    margin: 5px;
-  }
+
+#testgrey {
+  padding: 2%;
+  margin: 2% 25% 2% 10%
+}
+
+
+#testred {
+  margin-bottom: 0;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  border-radius: 25px 25px 0 0;
+  width: 64%;
+  margin-right: 2%;
+  margin-left: 2%;
+  float: right;
+  padding: 5%;
+/*  display: none;*/
+}
+
+#testblue {
+  margin-top: 0;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  border-radius: 0 0 25px 25px;
+  width: 46%;
+  margin-right: 2%;
+  margin-left: 2%;
+  float: right;
+    padding: 2%;
+}
+
+#testblue2 {
+  margin-top: 0;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  border-radius: 0 0 25px 25px;
+  width: 46%;
+  margin-right: 2%;
+  margin-left: 2%;
+  float: right;
+    padding: 2%;
+
+
+}
+
+#testgreen {
+    margin-top: 0;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  border-radius: 0 0 25px 25px;
+  width: 46%;
+  margin-right: 2%;
+  margin-left: 2%;
+  float: left;
+    padding: 2%;
+
+
+}
+
+
+#work0upper, #work0lower {
+  width: 33.3%;
+  display: block;
+  position: relative;
+}
+
+
+.jobInfo {
+  width: 100%;
+  min-height:100px;
+}
+
+#ball {
+
+}
+
+#date0 {
+  margin: 0;
+  width: 20%;
+  background-color: pink;
+  float: top;
+  padding-left: +4%;
+  position: absolute;
+  bottom: 0;
+}
 
 #line {
-  height: 30px;
+  display: flex;
+  min-height: 15px;
+  max-height: 30px;
+  z-index: -999;
+  border-radius: 1%;
 }
+
+.trackball  {
+  position: relative;
+  height:15px;
+  width: 15px;
+  border-radius: 50%;
+}
+
+#trackball1 {
+  left: +3%;
+}
+
+#trackball2 {
+  left: +40%;
+}
+
+#trackball3 {
+  left: +80%;
+}
+
+
+.workSection {
+  width: 33.3%
+}
+
 
 
 /*Subjects section*/

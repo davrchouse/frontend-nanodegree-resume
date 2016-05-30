@@ -44,6 +44,12 @@
 // });
 
 
-$( "#work0title" ).click(function() {
-  $( "#description1" ).animate({ "height": "+=50px" }, "slow" );
+
+$( "#testgrey" ).click(function() {
+  // var wid = 100;
+  // $( "#description1 span:first" ).hide();
+  // $( "#description1" ).animate(
+  //   { "height": "-=50px",
+  //     "width": "+="+wid }, "slow" );
+  $( ".description0" ).slideToggle("slow");
 });
