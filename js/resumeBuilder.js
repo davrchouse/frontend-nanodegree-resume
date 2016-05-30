@@ -65,11 +65,12 @@ bio.display = function() {
     changeText(".welcome-message","technology","red-text");
 
     //add the skills icon to the new skillSection
-    var formattedSkillsIcon = HTMLiconLeft.replace("%data%", bio.skills.icon);
+    var formattedSkillsIcon = HTMLiconRight.replace("%data%", bio.skills.icon);
     $("#skillHeader").append(formattedSkillsIcon);
     //add the formatted skills header and empty list to the new skillSection
     var skills_length = bio.skills.skillList.length;
-    $("#skillHeader").append(HTMLskillsStart);
+    $("#skillHeader").append(HTMLskillsHeader);
+    $("#skillList").append(HTMLskillsStart);
 
     //format and append the skills into the skillList
     for (var i = 0; i < skills_length; i++) {
@@ -94,17 +95,17 @@ bio.display = function() {
     addStars("CSS",formmattedThreeStars);
     addStars("Javascript",formmattedTwoStars);
 
-    //add the teaching header and icon and empty subjects list into the new teaching section
-    var formattedTeachIcon = HTMLiconRight.replace("%data%", bio.teaching.icon);
-    $("#teachingHeader").append(formattedTeachIcon);
-    var subjects_length = bio.teaching.subjects.length;
-    $("#teachingHeader").append(HTMLteachStart);
+   //  //add the teaching header and icon and empty subjects list into the new teaching section
+   //  var formattedTeachIcon = HTMLiconRight.replace("%data%", bio.teaching.icon);
+   //  $("#teachingHeader").append(formattedTeachIcon);
+   //  var subjects_length = bio.teaching.subjects.length;
+   //  $("#teachingHeader").append(HTMLteachStart);
 
-   //format and append the teaching subjects into the subject list
-    for (var i = 0; i < subjects_length; i++) {
-        var formattedSkill = HTMLskills.replace("%data%", bio.teaching.subjects[i]);
-        $("#subjects").append(formattedSkill);
-    };
+   // //format and append the teaching subjects into the subject list
+   //  for (var i = 0; i < subjects_length; i++) {
+   //      var formattedSkill = HTMLskills.replace("%data%", bio.teaching.subjects[i]);
+   //      $("#subjects").append(formattedSkill);
+   //  };
 }
 
 

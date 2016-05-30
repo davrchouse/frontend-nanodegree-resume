@@ -17,7 +17,7 @@ function makeChart(dataset) {
         var eachBooklength = teaching.subjects[book].length;
         bookLengths[book] = eachBooklength;
     };
-    console.log(bookLengths);
+    // console.log(bookLengths);
     var numBooks = (dataset).length;
     var widthOfBooks = ((100 - (numBooks*0.5))/numBooks);
     d3.select('.chartBox').selectAll('div')
@@ -34,13 +34,13 @@ function makeChart(dataset) {
         })
         // .style('background-color', 'blue')
         .attr('class', function() {
-            var rand = Math.floor(Math.random() * 3);
-            var color = ['bar dark-gray','bar brown','bar green'];
+            var rand = Math.floor(Math.random() * 4);
+            var color = ['bar blue','bar brown','bar green', 'bar red'];
                 return color[rand];
         })
         .style('padding-top', function(d) {
             var len = d.length;
-            console.log(len);
+            // console.log(len);
             if (len < 5) {
                 return 0;
             }})

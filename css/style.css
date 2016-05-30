@@ -202,26 +202,42 @@ a {
 /* Skills Section */
 
 #skillSection {
-  width: 50%;
+  width: 100%;
   order:0;
   margin-bottom: 30px;
-  text-align: left;
+ /* text-align: left;*/
+}
+
+#skillHeader {
+  width:100%;
+  display: inline-block;
 }
 
 #skills-h2 {
   padding-top: 24px;
-  padding-bottom: 8px;
-  width: 70%;
+  padding-bottom: 15px;
+
+}
+#skillList {
+  width:100%;
+  height: 200px;
+    display: flex;
+  -webkit-column-count: 2;
+  -webkit-column-gap:   5px;
+  -moz-column-count:    2;
+  -moz-column-gap:      5px;
+  column-count:         2;
+  column-gap:           5px;
 }
 
 #skills li{
   line-height: 28px;
   color: white;
-  width: 100%;
-  float: left;
+/*  float: left;*/
   padding-left: 10px;
-
 }
+
+
 
 .brown-star {
   color: #AA7552;
@@ -237,6 +253,7 @@ a {
 
 #teaching {
   width: 50%;
+  display: none;
   order:1;
   margin-bottom: 30px;
   text-align: right;
@@ -245,17 +262,17 @@ a {
 
 .icon-right {
     height: 40px;
-    float: right;
-    margin-left: auto;
+    float: left;
+ /*   margin-left: auto;*/
     padding: 10px;
-    padding-right: 0;
+    padding-left: 18px;
 
 }
 
 .icon-left {
     height: 40px;
     float: left;
-    padding: 3px 15px 5px 40px;
+    padding: 3px 15px 5px 80px;
 }
 
 
@@ -438,7 +455,7 @@ ul {
 
 .biopic {
   float: left;
-  padding: 10px;
+  padding: 5px 10px 10px 10px;
   width: 200px;
   display: none;
   margin-right: 20px;
@@ -448,10 +465,10 @@ span {
   padding: 5px;
 }
 
-span.right {
+/*span.right {
   padding: 5% 0 5% 5%;
 }
-
+*/
 .phone, .email, .github, .location {
   padding: 5px;
   margin: 0;
@@ -495,6 +512,61 @@ book {
 
 
 /* Media queries to handle various device widths */
+
+@media only screen and (max-width: 750px) {
+  #skillSection, .project-info, div.project-border {
+    width: 100%
+  }
+
+#content {
+    width: 45%
+  }
+#content2 {
+    width: 50%
+  }
+
+  #mapDiv {
+    display:none;
+  }
+
+  #skillSection { order:3;
+    width: 50%}
+  #Projects { order:2;}
+  #education, # {
+    width: 50%;
+  }
+
+  #skillList {
+    min-height: 500px;
+}
+  #skills li {
+    font-size: 14px;
+    padding: 5px;
+  }
+ #lets-connect {
+    margin-top: 10%;
+  }
+  .biopic {
+    width: 150px;
+  }
+
+#profile {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  #content, #content2 {
+    width: 100%
+  }
+/*  .project-info {
+    width: 60%
+  }
+  div.project-border {
+    width: 40%
+  }*/
+}
+
 
 @media only screen and (max-width: 1024px) {
   #lets-connect {

@@ -28,7 +28,8 @@ var HTMLprofileStart = '<div id="profile"><h2>Profile</h2></div>';
 var HTMLwelcomeMsg = '<p class="welcome-message">%data%</p>';
 var HTMLblueText = '<span class="blue">%data%</span>'
 
-var HTMLskillsStart = '<h2 id="skills-h2">Skills</h2><ul id="skills"></ul>';
+var HTMLskillsHeader = '<h2 id="skills-h2">Skills</h2>'
+var HTMLskillsStart = '<ul id="skills" class="flex-box"></ul>';
 var HTMLskills = '<li class="flex-item"><span class="right">%data%</span></li>';
 var HTMLbrownStars = '<span class="brown-star">%data%<span>'
 var HTMLwhiteDots = '<span class="white-dot">%data%<span>'
@@ -74,7 +75,7 @@ var HTMLiconRight = '<img src="%data%" class="icon-right">'
 var internationalizeButton = '<button>Internationalize</button>';
 var googleMap = '<div id="map"></div>';
 
-var bookChart = '<chart class="gray"><div class="chartBox"></div></chart>';
+var bookChart = '<chart class="dark-gray"><div class="chartBox"></div></chart>';
 
 /*
 The International Name challenge in Lesson 2 where you'll create a function that will need this helper code to run. Don't delete! It hooks up your code to the button you'll be appending.
