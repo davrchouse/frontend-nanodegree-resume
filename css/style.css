@@ -172,8 +172,6 @@ span {
 
 .gray {
   background-color: #f3f3f3;
-  padding-bottom: 10px;
-  clear:both;
 }
 
 .dark-gray {
@@ -323,7 +321,8 @@ span {
   padding-bottom: 0;}
 
 .projectHeader {
-  width: 100%;
+  width: 100vw;
+  height: 50px;
   order:-1;
   vertical-align: middle;
 }
@@ -451,7 +450,7 @@ div.project-border {
 
 #workExperience {
   width: 100%;
-  height: 400px;
+  height: 800px;
   order:-1;
   margin-bottom: 30px;
   padding: 2.5%;
@@ -483,9 +482,9 @@ div.project-border {
 
 
 #work0,#work1,#work2 {
-  width: 33%;
-  height: 300px;
-  margin-top: 20px;
+  width: 33.3%;
+  height: 200px;
+  display: block;
 }
 
 .work-entry {
@@ -500,7 +499,7 @@ div.project-border {
 }
 
 #leftCol {
-  width: 100%;
+  width: 200px;
   height: 100px;
 }
 #separator {
@@ -508,7 +507,7 @@ div.project-border {
   height: 10px;
 }
 #rightCol {
-  width: 100%;
+  width: 200px;
   height: 150px;
 
 }
@@ -519,6 +518,35 @@ div.project-border {
   -moz-border-radius: 25px;
   border-radius: 25px;
   padding: 2px 10px 3px 8px;
+}
+
+/*
+try animate
+*/
+
+/* div.block {
+    position: relative;
+    background-color: #abc;
+    left: 50px;
+    width: 90px;
+    height: 90px;
+    margin: 5px;
+  }*/
+#timeline {
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+ div.blocks {
+    position: relative;
+/*    left: 50px;*/
+    width: 90px;
+    height: 90px;
+    margin: 5px;
+  }
+
+#line {
+  height: 30px;
 }
 
 

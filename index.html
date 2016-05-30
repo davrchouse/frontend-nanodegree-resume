@@ -19,6 +19,7 @@
   you can't accomplish with vanilla (regular) JavaScript.
   -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.js"></script>
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
   <script src="js/jQuery.js"></script>
   <script src="js/helper.js"></script>
 
@@ -57,6 +58,18 @@
       </div>
     </div>
     <div id="content2" class="flex-box">
+      <div id="timeline" class="gray">
+        <div id="work0upper">
+          <div id="work0title" class="dark-gray blocks">title</div>
+          <div id="work0location">location</div>
+          <div id="description1" class="red blocks">description2</div>
+        </div>
+        <div id="line" class="brown"></div>
+        <div id="work0lower">
+          <div id="description2" class="blue blocks">description2</div>
+          <div id="description3" class="green blocks">description3</div>
+        </div>
+      </div>
       <div id="workExperience" class="gray flex-box">
         <div class="projectHeader">
           <h2 id="experience-h2">Experience</h2>
@@ -93,23 +106,10 @@
   course.
   -->
 
-  <!-- // <script type="text/javascript"> -->
-
-  <!-- //   var dataset = [5,10,15,20,25];
-
-  //   d3.select('chart').selectAll('div')
-  //       .data(dataset)
-  //       .enter()
-  //       .append('div')
-  //       .attr('class','bar')
-  //       .style('height',function(d) {
-  //           return d * 5 + 'px';
-  //       });
 
 
 
-  // </script>
- -->
+
   <script type="text/javascript">
     // Notice how all of a sudden there's JavaScript inside this HTML
     // document? You can write JavaScript between <script> tags. At the end of your
