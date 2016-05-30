@@ -19,3 +19,9 @@ $(function() {
         state = !state;
       });
     });
+
+
+// $( "#work1_button" ).click(function(){
+//   $( ".work1A" ).animate({ "left": "-=50px" }, "slow" );
+// });
+
