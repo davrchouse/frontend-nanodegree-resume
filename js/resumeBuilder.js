@@ -255,8 +255,6 @@ education.display = function() {
     var addToElement = $("#education");
     $(addToElement).prepend(formattedIcon);
     var test = $("#education").children(".icon-left").addClass("ed_icon");
-    console.log(test);
-
 
     for (school in education.schools) {
     //for each school create a new div with education-entry class
@@ -293,11 +291,27 @@ education.display = function() {
 };
 
 
+function displayMap () {
+    $("#mapDiv").append(googleMap);
+}
+
+function addBookChart () {
+    var findChartBox = $("#content2");
+    findChartBox.append(bookChart);
+    var formattedTeachIcon = HTMLiconLeft.replace("%data%", bio.teaching.icon);
+    $("chart").append(formattedTeachIcon);
+     $("chart").append(HTMLteachStart);
+
+}
+
 // -----run all the display functions
 projects.display();
 work.display();
 bio.display();
 education.display();
+displayMap();
+addBookChart();
+
 
 
 
@@ -329,4 +343,4 @@ education.display();
 // formatting and appending each project
 
 
-    $("#mapDiv").append(googleMap);
+

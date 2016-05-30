@@ -1,0 +1,39 @@
+<html>
+<head>
+    <!-- Modified from a quick lesson by https://egghead.io/lessons/d3-get-started-with-d3 -->
+    <title>simple d3 bar chart</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.js"></script>
+    <style type="text/css">
+        body {
+            padding-top: 50px;
+            padding-left: 100px;
+        }
+
+        .bar {
+            display: inline-block;
+            width: 20px;
+            height: 75px;
+            margin-right: 2px;
+            background-color: teal;
+        }</style>
+</head>
+<body>
+<script type="text/javascript">
+
+    var dataset = [5,10,15,20,25];
+
+    d3.select('body').selectAll('div')
+        .data(dataset)
+        .enter()
+        .append('div')
+        .attr('class','bar')
+        .style('height',function(d) {
+            return d * 6 + 'px';
+        });
+
+console.log(Math.floor(Math.random() * 3));
+
+
+    </script>
+</body>
+</html>

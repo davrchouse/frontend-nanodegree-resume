@@ -71,10 +71,10 @@ var HTMLonlineIndivClass = '<em><a class="white-text subtitle" href="%link%">%da
 var HTMLiconLeft = '<img src="%data%" class="icon-left">'
 var HTMLiconRight = '<img src="%data%" class="icon-right">'
 
-
 var internationalizeButton = '<button>Internationalize</button>';
 var googleMap = '<div id="map"></div>';
 
+var bookChart = '<chart class="gray"><div class="chartBox"></div></chart>';
 
 /*
 The International Name challenge in Lesson 2 where you'll create a function that will need this helper code to run. Don't delete! It hooks up your code to the button you'll be appending.

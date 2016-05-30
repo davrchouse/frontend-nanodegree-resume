@@ -18,8 +18,10 @@
   the DOM. jQuery is fast and easy to use, but it doesn't do anything
   you can't accomplish with vanilla (regular) JavaScript.
   -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.js"></script>
   <script src="js/jQuery.js"></script>
   <script src="js/helper.js"></script>
+
 
   <!--
   Uncomment the <script> tag below when you're ready to add an interactive
@@ -56,9 +58,11 @@
         </div>
       </div>
     </div>
-    <div id="workExperience" class="gray flexbox">
-      <div class="projectHeader">
-        <h2 id="experience-h2">Experience</h2>
+    <div id="content2" class="flex-box">
+      <div id="workExperience" class="gray flexbox">
+        <div class="projectHeader">
+          <h2 id="experience-h2">Experience</h2>
+        </div>
       </div>
     </div>
     <div id="lets-connect" class="dark-gray">
@@ -75,7 +79,7 @@
   -->
   <script src="js/resumeBuilder.js"></script>
 
-
+  <script src="js/d3_barChart.js"></script>
   <!--
   These scripts are written in JavaScript. You'll be breaking them down as part of
   a quiz. Essentially, the next few lines are checking to see if you have not
@@ -84,6 +88,23 @@
   course.
   -->
 
+  <!-- // <script type="text/javascript"> -->
+
+  <!-- //   var dataset = [5,10,15,20,25];
+
+  //   d3.select('chart').selectAll('div')
+  //       .data(dataset)
+  //       .enter()
+  //       .append('div')
+  //       .attr('class','bar')
+  //       .style('height',function(d) {
+  //           return d * 5 + 'px';
+  //       });
+
+
+
+  // </script>
+ -->
   <script type="text/javascript">
     // Notice how all of a sudden there's JavaScript inside this HTML
     // document? You can write JavaScript between <script> tags. At the end of your
