@@ -158,17 +158,22 @@ work.display = function() {
         var formattedJobDescription3 = HTMLworkDescription3.replace("%data%", work.jobs[job].description);
         //append all formatted items to the last added work-entry div
         var selector = "#work"+job;
-        if (job%2 == 0) {
-            $(selector).children('#rightCol').append(formattedJobInfo);
-            $(selector).children('#rightCol').append(formattedJobDescription1);
-            $(selector).children('#leftCol').append(formattedJobDescription2);
-            $(selector).children('#leftCol').append(formattedJobDescription3);
-        } else {
-            $(selector).children('#leftCol').append(formattedJobInfo);
-            $(selector).children('#leftCol').append(formattedJobDescription1);
-            $(selector).children('#rightCol').append(formattedJobDescription2);
-            $(selector).children('#rightCol').append(formattedJobDescription3);
-        };
+        $(selector).children('#leftCol').append(formattedJobInfo);
+        $(selector).children('#leftCol').append(formattedJobDescription1);
+        $(selector).children('#rightCol').append(formattedJobDescription2);
+        $(selector).children('#rightCol').append(formattedJobDescription3);
+        //code for switching back and forth work entry layout
+        // if (job%2 == 0) {
+        //     $(selector).children('#rightCol').append(formattedJobInfo);
+        //     $(selector).children('#rightCol').append(formattedJobDescription1);
+        //     $(selector).children('#leftCol').append(formattedJobDescription2);
+        //     $(selector).children('#leftCol').append(formattedJobDescription3);
+        // } else {
+        //     $(selector).children('#leftCol').append(formattedJobInfo);
+        //     $(selector).children('#leftCol').append(formattedJobDescription1);
+        //     $(selector).children('#rightCol').append(formattedJobDescription2);
+        //     $(selector).children('#rightCol').append(formattedJobDescription3);
+        // };
     };
 };
 

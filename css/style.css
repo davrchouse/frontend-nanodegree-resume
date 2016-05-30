@@ -227,9 +227,9 @@ span {
 /*--conent1 section*/
 
 #content {
-  width: 50%;
+  width: 100%;
   order:1;
-  margin-right: 5%;
+/*  margin-right: 5%;*/
   margin-bottom: 30px;
 }
 
@@ -442,7 +442,7 @@ div.project-border {
 /*--conent2 section*/
 
 #content2 {
-  width: 45%;
+  width: 100%;
   order:2;
   margin-bottom: 30px;
 }
@@ -451,7 +451,7 @@ div.project-border {
 
 #workExperience {
   width: 100%;
-  height: 100%;
+  height: 400px;
   order:-1;
   margin-bottom: 30px;
   padding: 2.5%;
@@ -483,8 +483,8 @@ div.project-border {
 
 
 #work0,#work1,#work2 {
-  width:100%;
-  height: 100%;
+  width: 33%;
+  height: 300px;
   margin-top: 20px;
 }
 
@@ -500,13 +500,17 @@ div.project-border {
 }
 
 #leftCol {
-  width: 48%;
+  width: 100%;
+  height: 100px;
 }
 #separator {
-  width: 4%;
+  width: 100%;
+  height: 10px;
 }
 #rightCol {
-  width: 48%;
+  width: 100%;
+  height: 150px;
+
 }
 
 .round {
