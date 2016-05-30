@@ -57,7 +57,9 @@ h5 {
   font-size: 14px;
   color: #999;
   line-height: 16px;
-  float: left;
+  width: 100%;
+/*  text-align: center;
+  display: inline-block;*/
 }
 
 .location-text {
@@ -65,8 +67,6 @@ h5 {
   font-size: 14px;
   color: #999;
   line-height: 16px;
-  float: right;
-
 }
 
 p {
@@ -89,6 +89,10 @@ a {
   padding-left: 100px;
 }
 
+.center-text {
+  text-align: center;
+}
+
 .brown {
   background-color: #AA7552;
 }
@@ -105,6 +109,11 @@ a {
 
 .white-text {
   color: #fff;
+}
+
+.white-title {
+  color: #fff;
+  font-size: 16px;
 }
 
 .green-text {
@@ -338,7 +347,7 @@ a {
 }
 
 .black-title {
-  font-size: 20px;
+  font-size: 16px;
   color: black;
   padding-bottom: 5px;
 }
@@ -442,9 +451,13 @@ div.project-border {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-/*  justify-content: space-around;*/
+  justify-content: space-around;
   padding: 0;
 }
+
+/*.flex-item {
+  width: 100%;
+}*/
 
 .center-content {
   padding: 2.5% 5%;
@@ -511,6 +524,17 @@ chart {
   margin-top: 20px;
 }
 
+.work-entry {
+  margin-right: 2.5% 0 2.5% 2.5%;
+  padding:  2.5%;
+  text-align: center;
+}
+
+.work-entry:hover {
+  background-color: #3C4D4E;
+  cursor: pointer;
+}
+
 #leftCol {
   width: 48%;
 }
@@ -522,7 +546,7 @@ chart {
 }
 
 .round {
-  border:5px solid #f3f3f3;
+  border: 5px solid #f3f3f3;
   -webkit-border-radius: 25px;
   -moz-border-radius: 25px;
   border-radius: 25px;

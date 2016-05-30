@@ -147,11 +147,11 @@ work.display = function() {
         var formattedWorkDiv = HTMLworkStart.replace("#num#", job);
         $("#workExperience").append(formattedWorkDiv);
         //format, then concat employer and title
-        var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
         var formattedTitle = HTMLworkTitle.replace("%data%", work.jobs[job].title);
+        var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
         var formattedJobDates = HTMLworkDates.replace("%data%", work.jobs[job].dates);
         var formattedJobLocation = HTMLworkLocation.replace("%data%", work.jobs[job].location);
-        var formattedJobInfo = formattedEmployer+formattedTitle+formattedJobDates+formattedJobLocation;
+        var formattedJobInfo = formattedTitle+formattedEmployer+formattedJobDates+formattedJobLocation;
         //format work dates, location, and description
         var formattedJobDescription1 = HTMLworkDescription1.replace("%data%", work.jobs[job].description);
         var formattedJobDescription2 = HTMLworkDescription2.replace("%data%", work.jobs[job].description);
