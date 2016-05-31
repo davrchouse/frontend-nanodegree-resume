@@ -682,6 +682,7 @@ try animate
 .jobInfo {
   width: 100%;
   height:100px;
+ /* position: relative;*/
 }
 
 
@@ -707,19 +708,20 @@ try animate
   height:15px;
   width: 15px;
   border-radius: 50%;
+  left: +8%;
 }
 
-#trackball1 {
+/*#trackball0 {
   left: +3%;
 }
 
-#trackball2 {
+#trackball1 {
   left: +40%;
 }
 
-#trackball3 {
+#trackball2 {
   left: +80%;
-}
+}*/
 
 
 

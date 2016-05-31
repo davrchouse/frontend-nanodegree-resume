@@ -13,6 +13,9 @@ function WorkSectionClick(e) {
         thisDiv.removeClass('openable').addClass("open").removeClass('closed');
         thisDiv.animate({width: '70%'}, 'slow');
         thisDiv.siblings().addClass('closed').addClass("openable").removeClass("open").animate({width: '15%'}, 'slow');
+        thisDiv.siblings().find(".jobInfo").css('position','relative').css('top', '+70px');
+        thisDiv.find(".jobInfo").css('position','relative').css('top', '0px');
+
     // thisDiv.siblings().find(".toggleText").toggleClass("none");
     // thisDiv.show();
     // thisDiv.siblings().children().hide();
@@ -27,6 +30,7 @@ else if (thisDiv.hasClass('open'))
     thisDiv.animate({width: '33.3%'}, 'slow');
     thisDiv.siblings().animate({width: '33.3%'}, 'slow');
     thisDiv.siblings().find("p.toggleText").removeClass("none").addClass("show");
+    thisDiv.siblings().find(".jobInfo").css('position','relative').css('top', '0px');
     }
 }
 
