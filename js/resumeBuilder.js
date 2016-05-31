@@ -324,12 +324,12 @@ function addBookChart () {
 }
 
 // -----run all the display functions
-// projects.display();
+projects.display();
 // work.display();
 bio.display();
-// education.display();
-// displayMap();
-// addBookChart();
+education.display();
+displayMap();
+addBookChart();
 
 
 

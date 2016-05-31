@@ -61,11 +61,11 @@
       </div>
     </div>
     <div id="content2" class="flex-box">
-      <button id="trigger">trigger</button>
-      <div id="timeline" class="gray flex-box">
-        
-        <div id="work0" class="workSection">
+      <div id="timeline" class="gray">
+        <div id="timelinebox">
+          <div id="work0" class="workSection openable" onclick="WorkSectionClick(this)">
           work 0
+
          <!--  <div id="work0info" class="jobInfo">
             <div id="testgrey" class="dark-gray white-title">Blah blah blah title to test</div>
           <div id="work0location" class="location-text">location</div></div>
@@ -82,13 +82,10 @@
           <div id="testblue" class="description0 blue blocks"></div>
            -->
         </div>
-        <div id="work1" class="workSection">
-          work 1
-        </div>
-        <div id="work2" class="workSection">
-          work 2
-        </div>
+        <div id="work1" class="workSection openable" onclick="WorkSectionClick(this)">work 1</div>
+        <div id="work2" class="workSection openable" onclick="WorkSectionClick(this)">work 2</div>
       </div>
+    </div>
 
       <div id="workExperience" class="gray flex-box">
         <div class="projectHeader">
