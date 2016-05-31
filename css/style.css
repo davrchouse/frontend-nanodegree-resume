@@ -517,8 +517,15 @@ div.project-border {
   display: block;
 }
 
-.testIt {
-  height: 100px;
+.toggleText {
+  color: white;
+}
+.show {
+  display: block;
+}
+
+.none {
+  display: none;
 }
 
 .LowerWork {
@@ -625,7 +632,7 @@ try animate
   margin-left: 2%;
   float: right;
   padding: 5%;
-  height: 20px;
+  min-height: 20px;
 }
 
 #testblue2 {

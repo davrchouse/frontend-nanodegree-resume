@@ -3,26 +3,30 @@ function WorkSectionClick(e) {
     var thisDiv = $(e);
     var number = thisDiv.attr('id').replace(/[^0-9\.]+/g, "");
  if (thisDiv.hasClass('openable')) {
-    thisDiv.removeClass('openable').addClass("open");
-    thisDiv.siblings().removeClass('open').addClass("openable");
-    thisDiv.animate({width: '70%'}, 'slow');
-    thisDiv.siblings().animate({width: '15%'}, 'slow');
-
+        if (thisDiv.hasClass('closed')) {
+            thisDiv.siblings().find("p.toggleText").removeClass("show").addClass("none");
+            thisDiv.find("p.toggleText").removeClass("none").addClass("show");
+        } else {
+            thisDiv.siblings().find("p.toggleText").addClass("none").removeClass("show");
+            thisDiv.find("p.toggleText").removeClass("none").addClass("show");
+        }
+        thisDiv.removeClass('openable').addClass("open").removeClass('closed');
+        thisDiv.animate({width: '70%'}, 'slow');
+        thisDiv.siblings().addClass('closed').addClass("openable").removeClass("open").animate({width: '15%'}, 'slow');
+    // thisDiv.siblings().find(".toggleText").toggleClass("none");
     // thisDiv.show();
     // thisDiv.siblings().children().hide();
 
     // thisDiv.siblings().find(".toggleDown").slideToggle();
-    // thisDiv.siblings().children("*").effect('scale', {direction: 'horizontal', percent: 50});
+  //   // thisDiv.siblings().children("*").effect('scale', {direction: 'horizontal', percent: 50});
 
     }
-  else if (thisDiv.hasClass('open'))
+else if (thisDiv.hasClass('open'))
     {
-    thisDiv.removeClass('open').addClass("openable");
+    thisDiv.removeClass('open').removeClass("openable");
     thisDiv.animate({width: '33.3%'}, 'slow');
     thisDiv.siblings().animate({width: '33.3%'}, 'slow');
-    // thisDiv.show();
-    // thisDiv.siblings().children().show();
-
+    thisDiv.siblings().find("p.toggleText").removeClass("none").addClass("show");
     }
 }
 
