@@ -15,7 +15,6 @@ h6 {
   font-weight: 300;
   box-sizing: border-box;
   display: block;
-  z-index: 1;
 }
 
 .clear-fix {
@@ -458,10 +457,30 @@ div.project-border {
   padding: 2.5%;
 }
 
+#timeline {
+  width: 100%;
+  margin-bottom: 30px;
+  padding: 10px 20px 20px 20px;
+  height: 400px;
+}
+
+#workHeader {
+  width: 100%;
+  height: 40px;
+}
 
 #experience-h2 {
   display: inline-block;
-  padding-top: 22px;
+/*  padding-top: 22px;*/
+}
+#timelinebox {
+  width: 100%;
+   display: -webkit-flex;
+   display: flex;
+   -webkit-flex-direction: row;
+   flex-direction: row;
+   -webkit-justify-content: flex-start;
+   justify-content: flex-start;
 }
 
 
@@ -478,32 +497,47 @@ div.project-border {
   font-size: 14px;
   color: #999;
   line-height: 16px;
+}
+
+.workLocation {
+  font-style: italic;
+  font-size: 14px;
+  color: #999;
+  line-height: 16px;
   width: 100%;
-  text-align: center;
+  text-align: right;
+  padding: 2% 10% 2% 2%;
 }
 
 
-.workSection {
-/*  border: 5px solid black;*/
-  background-color: #abc;
-  height: 300px;
+
+.UpperWork {
+  height: 200px;
+  position: relative;
+  display: block;
+}
+
+.testIt {
+  height: 100px;
+}
+
+.LowerWork {
+  min-height: 111px;
+  position: relative;
+  display: block;
 }
 
 #work0 {
   float: left;
   width: 33.3%;
-  background-color: green;
 }
 #work1 {
-    width: 33.3%;
-      background-color: blue;
-
+  width: 33.3%;
 }
+
 #work2 {
   float: right;
-    width: 33.3%;
-          background-color: red;
-
+  width: 33.3%;
 }
 
 .work-entry {
@@ -553,30 +587,17 @@ try animate
   }*/
 
 
-#timeline {
-  width: 100%;
-  margin-bottom: 30px;
-  padding: 2.5%;
-  height: 350px;
+
+
+.testgrey {
+  margin: 2% 25% 2% 10%;
+  height: 100px;
 }
 
-#timelinebox {
-  width: 100%;
-   display: -webkit-flex;
-   display: flex;
-   -webkit-flex-direction: row;
-   flex-direction: row;
-   -webkit-justify-content: flex-start;
-   justify-content: flex-start;
-   overflow: hidden;
+#JobTitle {
+    padding: 2%;
+    height: 80px;
 }
-
-
-#testgrey {
-  padding: 2%;
-  margin: 2% 25% 2% 10%
-}
-
 
 #testred {
   margin-bottom: 0;
@@ -588,7 +609,10 @@ try animate
   margin-left: 2%;
   float: right;
   padding: 5%;
-  display: none;
+  position: absolute;
+  bottom: 0;
+  left: 30%;
+/*  display: none;*/
 }
 
 #testblue {
@@ -600,8 +624,8 @@ try animate
   margin-right: 2%;
   margin-left: 2%;
   float: right;
-    padding: 2%;
-    height: 20px;
+  padding: 5%;
+  height: 20px;
 }
 
 #testblue2 {
@@ -613,7 +637,7 @@ try animate
   margin-right: 2%;
   margin-left: 2%;
   float: right;
-    padding: 2%;
+    padding: 5%;
     height: 100px;
     height: 20px;
 /* display: none;
@@ -629,7 +653,7 @@ try animate
   margin-right: 2%;
   margin-left: 2%;
   float: right;
-    padding: 2%;
+    padding: 5%;
     display: none;
 
 }
@@ -643,44 +667,32 @@ try animate
   margin-right: 2%;
   margin-left: 2%;
   float: left;
-    padding: 2%;
+    padding: 5%;
 
 
 }
-
-
-#work0upper, #work0lower {
-  width: 33.3%;
-  display: block;
-  position: relative;
-}
-
 
 .jobInfo {
   width: 100%;
-  min-height:100px;
+  height:100px;
 }
 
-#ball {
-
-}
 
 #date0 {
   margin: 0;
   width: 20%;
-  background-color: pink;
   float: top;
   padding-left: +4%;
   position: absolute;
   bottom: 0;
 }
 
-#line {
+.line {
   display: flex;
   min-height: 15px;
-  max-height: 30px;
-  z-index: -999;
+/*  max-height: 30px;*/
   border-radius: 1%;
+  width: 100%;
 }
 
 .trackball  {

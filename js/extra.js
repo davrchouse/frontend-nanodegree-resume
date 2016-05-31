@@ -5,16 +5,24 @@ function WorkSectionClick(e) {
  if (thisDiv.hasClass('openable')) {
     thisDiv.removeClass('openable').addClass("open");
     thisDiv.siblings().removeClass('open').addClass("openable");
-    alert("yowzers");
     thisDiv.animate({width: '70%'}, 'slow');
     thisDiv.siblings().animate({width: '15%'}, 'slow');
+
+    // thisDiv.show();
+    // thisDiv.siblings().children().hide();
+
+    // thisDiv.siblings().find(".toggleDown").slideToggle();
+    // thisDiv.siblings().children("*").effect('scale', {direction: 'horizontal', percent: 50});
+
     }
   else if (thisDiv.hasClass('open'))
     {
-    alert(number);
     thisDiv.removeClass('open').addClass("openable");
     thisDiv.animate({width: '33.3%'}, 'slow');
     thisDiv.siblings().animate({width: '33.3%'}, 'slow');
+    // thisDiv.show();
+    // thisDiv.siblings().children().show();
+
     }
 }
 
