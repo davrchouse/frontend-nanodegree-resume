@@ -483,10 +483,22 @@ div.project-border {
 }
 
 
-#work0,#work1,#work2 {
+.workSection {
+  border: 5px solid black;
+  background-color: #abc;
+  min-height: 300px;
+}
+
+#work0 {
+  float: left;
   width: 33.3%;
-  height: 200px;
-  display: block;
+}
+#work1 {
+    width: 33.3%;
+}
+#work2 {
+  float: right;
+    width: 33.3%;
 }
 
 .work-entry {
@@ -557,7 +569,7 @@ try animate
   margin-left: 2%;
   float: right;
   padding: 5%;
-/*  display: none;*/
+  display: none;
 }
 
 #testblue {
@@ -570,19 +582,36 @@ try animate
   margin-left: 2%;
   float: right;
     padding: 2%;
+    height: 20px;
 }
 
 #testblue2 {
   margin-top: 0;
   -webkit-border-radius: 25px;
   -moz-border-radius: 25px;
-  border-radius: 0 0 25px 25px;
+  border-radius: 25px 25px 0 0;
   width: 46%;
   margin-right: 2%;
   margin-left: 2%;
   float: right;
     padding: 2%;
+    height: 100px;
+    height: 20px;
+/* display: none;
+*/
+}
 
+#testblue3 {
+  margin-top: 0;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  border-radius: 25px 25px 0 0;
+  width: 46%;
+  margin-right: 2%;
+  margin-left: 2%;
+  float: right;
+    padding: 2%;
+    display: none;
 
 }
 
@@ -655,9 +684,8 @@ try animate
 }
 
 
-.workSection {
-  width: 33.3%
-}
+
+
 
 
 

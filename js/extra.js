@@ -44,12 +44,45 @@
 // });
 
 
+$('#trigger').toggle(function() {
+        $('#work0').animate({width: '50%'});
+        $('#work1').animate({width: '20%'});
+        $('#work2').animate({width: '30%'});
+    },function() {
+        $('#work0').animate({width: '33.3%'});
+        $('#work1').animate({width: '33.3%'});
+        $('#work2').animate({width: '33.3%'});
+    });
 
-$( "#testgrey" ).click(function() {
-  // var wid = 100;
-  // $( "#description1 span:first" ).hide();
-  // $( "#description1" ).animate(
-  //   { "height": "-=50px",
-  //     "width": "+="+wid }, "slow" );
-  $( ".description0" ).slideToggle("slow");
-});
+
+// $("#testgrey").click(function() {
+
+//   $('#work0upper').toggle('slide',{ direction: "left" }, 600);
+//   $('#work0lower').toggle('slide',{ direction: "left" }, 600);
+//   $('#work0upper').css({ width: "80%" });
+//   $('#work0lower').css({ width: "80%" });
+//   $('#work0upper').toggle('slide',{ direction: "left" }, 1000);
+//   $('#work0lower').toggle('slide',{ direction: "left" }, 1000);
+//   $('#work1upper').toggle('slide',{ direction: "right" }, 1000);
+//   $('#work1lower').toggle('slide',{ direction: "right" }, 1000);
+//   $('#work2upper').toggle('slide',{ direction: "right" }, 1000);
+//   $('#work2lower').toggle('slide',{ direction: "right" }, 1000);
+
+// });
+
+// $( "#testgrey" ).click(function() {
+//     if ($("#testblue3").css("display") == 'none') {
+//       $( "#testblue" ).slideToggle("slow");
+//       $( "#testblue" ).slideToggle("slow");
+//        $( "#testblue2" ).slideToggle("slow");
+//         $( "#testblue3" ).delay(500).slideToggle("slow");
+//          $('#testgreen').toggle('slide',{ direction: "up" }, 500);
+//     }
+//     else {
+
+//       $( "#testblue" ).slideToggle("slow");
+//       $( "#testblue" ).slideToggle("slow");
+//        $( "#testblue3" ).slideToggle("slow");
+//         $( "#testblue2" ).delay(500).slideToggle("slow");
+//     }
+// });
