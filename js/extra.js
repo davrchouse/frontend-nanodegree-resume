@@ -1,3 +1,4 @@
+//WORKING FUNCITON FOR EXPANDING CLICKED SECTION BY 70 VS 15 & 15%
 
 function WorkSectionClick(e) {
     var thisDiv = $(e);
@@ -15,14 +16,6 @@ function WorkSectionClick(e) {
         thisDiv.siblings().addClass('closed').addClass("openable").removeClass("open").animate({width: '15%'}, 'slow');
         thisDiv.siblings().find(".jobInfo").css('position','relative').css('top', '+70px');
         thisDiv.find(".jobInfo").css('position','relative').css('top', '0px');
-
-    // thisDiv.siblings().find(".toggleText").toggleClass("none");
-    // thisDiv.show();
-    // thisDiv.siblings().children().hide();
-
-    // thisDiv.siblings().find(".toggleDown").slideToggle();
-  //   // thisDiv.siblings().children("*").effect('scale', {direction: 'horizontal', percent: 50});
-
     }
 else if (thisDiv.hasClass('open'))
     {
@@ -33,6 +26,33 @@ else if (thisDiv.hasClass('open'))
     thisDiv.siblings().find(".jobInfo").css('position','relative').css('top', '0px');
     }
 }
+
+
+
+// function WorkSectionClick(e) {
+//     var thisDiv = $(e);
+//     var number = thisDiv.attr('id').replace(/[^0-9\.]+/g, "");
+//  if (thisDiv.hasClass('openable')) {
+     
+//         thisDiv.removeClass('openable').addClass("open").removeClass('closed');
+//         thisDiv.animate({width: '70%'}, 'slow');
+//         thisDiv.siblings().animate({width: '15%'}, 'slow');
+
+//         // thisDiv.siblings().addClass('closed').addClass("openable").removeClass("open").animate({width: '15%'}, 'slow');
+//         // thisDiv.siblings().find(".jobInfo").css('position','relative').css('top', '+70px');
+//         // thisDiv.find(".jobInfo").css('position','relative').css('top', '0px');
+//     }
+// else if (thisDiv.hasClass('open'))
+//     {
+//     thisDiv.removeClass('open').removeClass("openable");
+//     thisDiv.animate({width: '33.3%'}, 'slow');
+//         thisDiv.siblings().animate({width: '33.3%'}, 'slow');
+
+  
+//     }
+// }
+
+
 
 
 //TO ADD FOR INTERNAL CHANGES TO EACH WORK SECTION
