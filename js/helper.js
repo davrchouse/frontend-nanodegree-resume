@@ -38,7 +38,7 @@ var HTMLteachStart = '<h2 id="teach-h2">Teaching Subjects</h2><ul id="subjects">
 
 
 var HTMLworkStart = '<div id="work#num#" class="flex-box gray"><div id="leftCol" class="flex-box"></div><div id="separator" class="brown"></div><div id="rightCol" class="flex-box"></div></div>';
-var HTMLworkTitle = '<div id="work1_button" class="work-entry dark-gray"><p class="white-title">%data%</p></div>';
+var HTMLworkTitle = '<div id="work#num#_button" class="work-entry dark-gray" onclick="WorkSectionClick(this)"><p class="white-title">%data%</p></div>';
 var HTMLworkEmployer = '<div class="gray center-text flex-box"><a class="black-title" href="#">%data%</a>';
 var HTMLworkDates = '<div class="date-text">%data%</div>';
 var HTMLworkLocation = '<div class="location-text">%data%</div></div>';

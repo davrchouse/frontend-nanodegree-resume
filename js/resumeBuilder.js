@@ -112,9 +112,9 @@ var work = {
             "dates": "2014 - present",
             "descript":
                 [
-                "Strong background to teach a wide range of science and mathematics with special emphasis on project-based and experimental learning models.",
-                "Adaptive and individualized instruction for college, high school, and elementary students with over 500 hours of one on one teaching.",
-                "Currently learning front end web development at Udacity to create educational content for students."
+                "• Strong background to teach a wide range of science and mathematics with special emphasis on project-based and experimental learning models.",
+                "• Created adaptive and individualized instruction for college, high school, and elementary students with over 500 hours of one on one teaching.",
+                "• Currently learning front-end web development at Udacity to create interactive educational content for students."
                 ]
         },
      {
@@ -124,21 +124,21 @@ var work = {
             "dates": "2011 - 2013",
             "descript":
                 [
-                "Biological research using genetics, behavior, and electrical recordings, to explore the brain circuitry responsible for reward learning.",
-                "test",
-                "test2"
+                "• Biological research to understand how the brain encodes reward and motivation during learning.",
+                "• Offered advanced lectures, seminars on topics ranging from physiology to mechanisms of addiction.",
+                "• Independently developed unique electrical, optical, and analytical tools (MATLAB) for electrical recordings."
                 ]
         },
      {
-            "title": "Postdoctoral Fellow in Neuroscience",
-            "employer": "University of California, Berkeley",
-            "location": "Berkeley, CA",
-            "dates": "2010 - 2011",
+            "title": "Graduate Student in Neuroscience",
+            "employer": "University of California, San Diego",
+            "location": "San Diego, CA",
+            "dates": "2004 - 2010",
             "descript":
                 [
-                "Discovered mechanisms for how sensory neurons process, learn, and adapt to experience.",
-                "test",
-                "test2"
+                "• Discovered mechanisms of learning and information processing at the level of synapses and brain circuits.",
+                "• Student instructor for courses at UCSD and Woods Hole Marine Biological Laboratory. Composed outstanding class exams, visual presentations of concepts, and lectures.",
+                "• Gained extensive expertise in experimental design and techniques including molecular biology, microscopy, and electrophysiology. • Coded complex acquistion and analysis software for electrical recording data (IGOR)"
                 ]
         }
     ],
@@ -154,7 +154,7 @@ work.display = function() {
         var formattedWorkDiv = HTMLworkStart.replace("#num#", job);
         $("#workExperience").append(formattedWorkDiv);
         //format title, employer
-        var formattedTitle = HTMLworkTitle.replace("%data%", work.jobs[job].title);
+        var formattedTitle = HTMLworkTitle.replace("#num#", job).replace("%data%", work.jobs[job].title);
         var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
         //format work dates, location, and description
         var formattedJobDates = HTMLworkDates.replace("%data%", work.jobs[job].dates);
@@ -179,6 +179,27 @@ work.display = function() {
             $(selector).children('#rightCol').append(formattedJobDescription3);
         };
     };
+    // changeText(targetElement,textToChange,newClass){
+    // var oldHTML = $(targetElement).html();
+    changeText("#desc0B", "college, high school, and elementary","white-text2");
+    changeText("#desc0B", "over 500 hours","white-text2");
+    changeText("#desc0C", "interactive educational content","white-text2");
+    changeText("#desc0C", "front-end web development","white-text2");
+    changeText("#desc0A", "science and mathematics","white-text2");
+    changeText("#desc0A", "project-based and experimental learning","white-text2");
+    changeText("#desc1C", "unique electrical, optical, and analytical tools","white-text2");
+    changeText("#desc1B", "lectures, seminars","white-text2");
+    changeText("#desc1A", "Biological research","white-text2");
+    changeText("#desc1A", "encodes reward and motivation","white-text2");
+    changeText("#desc1A", "mechanisms of learning","white-text2");
+    changeText("#desc2A", "mechanisms of learning","white-text2");
+    changeText("#desc2A", "information processing","white-text2");
+    changeText("#desc2C", "expertise in experimental design and techniques","white-text2");
+    changeText("#desc2C", "complex acquistion and analysis software","white-text2");
+    changeText("#desc2B", "instructor for courses","white-text2");
+    changeText("#desc2B", "visual presentations of concepts","white-text2");
+
+// interactive educational content
 
 };
 
