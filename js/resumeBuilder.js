@@ -3,7 +3,7 @@
 var bio = {
     "name": "David R.C. House",
     "role": "Web Developer",
-    "profile": "After many years as a biologist and a neuroscientist, I am now dedicated to a career in education and technology. I love the ability to develop and communicate ideas, engage students with interactive and visual tools, and to bring excitement and first hand research experience to learning.",
+    "profile": "After many years as a biologist and neuroscientist, I am now dedicated to a career in education and technology. I love the ability to develop and communicate ideas, engage students with interactive and visual tools, and to bring excitement and first hand research experience to learning.",
     "contacts": {
         "mobile": "925.786.4352",
         "email": ["davrchouse@gmail.com","mailto:davrchouse@gmail.com"],
@@ -50,15 +50,6 @@ bio.display = function() {
     var formattedProfile = HTMLwelcomeMsg.replace("%data%", bio.profile);
     $("#profile").append(formattedProfile);
 
-    //make a function to change color of words in the text
-    function changeText(targetElement,textToChange,newClass){
-        var oldHTML = $(targetElement).html();
-        //console.log(oldHTML);
-        var addTextHTML = '<span class="'+newClass+'">'+textToChange+'</span>';
-        var newHTML = oldHTML.replace(textToChange,addTextHTML);
-        //console.log(newHTML);
-        $(targetElement).html(newHTML)
-    };
     changeText(".welcome-message","biologist","blue-text");
     changeText(".welcome-message","neuroscientist","blue-text");
     changeText(".welcome-message","education","green-text");
@@ -84,6 +75,7 @@ bio.display = function() {
     var dotsTwo = "&bull; &bull;"
     var formmattedTwoStars = HTMLbrownStars.replace("%data%", starsTwo)+HTMLwhiteDots.replace("%data%", dotsThree);
     var formmattedThreeStars = HTMLbrownStars.replace("%data%", starsThree)+HTMLwhiteDots.replace("%data%", dotsTwo);
+
     function addStars (textAddingTo,starNumber) {
         var formatText = "span:contains('%data%')";
         var selectText =formatText.replace("%data%",textAddingTo);
@@ -94,21 +86,21 @@ bio.display = function() {
     addStars("HTML",formmattedThreeStars);
     addStars("CSS",formmattedThreeStars);
     addStars("Javascript",formmattedTwoStars);
-
-   //  //add the teaching header and icon and empty subjects list into the new teaching section
-   //  var formattedTeachIcon = HTMLiconRight.replace("%data%", bio.teaching.icon);
-   //  $("#teachingHeader").append(formattedTeachIcon);
-   //  var subjects_length = bio.teaching.subjects.length;
-   //  $("#teachingHeader").append(HTMLteachStart);
-
-   // //format and append the teaching subjects into the subject list
-   //  for (var i = 0; i < subjects_length; i++) {
-   //      var formattedSkill = HTMLskills.replace("%data%", bio.teaching.subjects[i]);
-   //      $("#subjects").append(formattedSkill);
-   //  };
 }
 
+  /*
+Code I wrote to change the color of certain text words in any span.
+Uses class names that change font color...
+*/
 
+function changeText(targetElement,textToChange,newClass){
+    var oldHTML = $(targetElement).html();
+    //console.log(oldHTML);
+    var addTextHTML = '<span class="'+newClass+'">'+textToChange+'</span>';
+    var newHTML = oldHTML.replace(textToChange,addTextHTML);
+    //console.log(newHTML);
+    $(targetElement).html(newHTML)
+    }
 
 // -----Work object for each job (employer, title, dates, description, and location)
 var work = {
@@ -118,21 +110,36 @@ var work = {
             "employer": "Wyzant Tutoring",
             "location": "Bay Area, CA",
             "dates": "2014 - present",
-            "description": "Adaptive and individualized instruction for college, high school, and elementary students."
+            "descript":
+                [
+                "Strong background to teach a wide range of science and mathematics with special emphasis on project-based and experimental learning models.",
+                "Adaptive and individualized instruction for college, high school, and elementary students with over 500 hours of one on one teaching.",
+                "Currently learning front end web development at Udacity to create educational content for students."
+                ]
         },
      {
             "title": "Postdoctoral Fellow in Neuroscience",
             "employer": "University of Geneva",
             "location": "Geneva, Swizterland",
             "dates": "2011 - 2013",
-            "description": "Biological research using genetics, behavior, and electrical recordings, to explore the brain circuitry responsible for reward learning."
+            "descript":
+                [
+                "Biological research using genetics, behavior, and electrical recordings, to explore the brain circuitry responsible for reward learning.",
+                "test",
+                "test2"
+                ]
         },
      {
             "title": "Postdoctoral Fellow in Neuroscience",
             "employer": "University of California, Berkeley",
             "location": "Berkeley, CA",
             "dates": "2010 - 2011",
-            "description": "Discovered mechanisms for how sensory neurons process, learn, and adapt to experience."
+            "descript":
+                [
+                "Discovered mechanisms for how sensory neurons process, learn, and adapt to experience.",
+                "test",
+                "test2"
+                ]
         }
     ],
     "icon": "images/icons/experience_icon.svg"
@@ -146,16 +153,18 @@ work.display = function() {
         //for each job create a new div with work-entry class
         var formattedWorkDiv = HTMLworkStart.replace("#num#", job);
         $("#workExperience").append(formattedWorkDiv);
-        //format, then concat employer and title
+        //format title, employer
         var formattedTitle = HTMLworkTitle.replace("%data%", work.jobs[job].title);
         var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
+        //format work dates, location, and description
         var formattedJobDates = HTMLworkDates.replace("%data%", work.jobs[job].dates);
         var formattedJobLocation = HTMLworkLocation.replace("%data%", work.jobs[job].location);
+        // then concat all into html
         var formattedJobInfo = formattedTitle+formattedEmployer+formattedJobDates+formattedJobLocation;
-        //format work dates, location, and description
-        var formattedJobDescription1 = HTMLworkDescription1.replace("%data%", work.jobs[job].description);
-        var formattedJobDescription2 = HTMLworkDescription2.replace("%data%", work.jobs[job].description);
-        var formattedJobDescription3 = HTMLworkDescription3.replace("%data%", work.jobs[job].description);
+        //format each green, red, or blue div with the 3 descriptions for each job
+        var formattedJobDescription1 = HTMLworkDescription1.replace("#num#", "desc"+job+"A").replace("%data%", work.jobs[job].descript[0]);
+        var formattedJobDescription2 = HTMLworkDescription2.replace("#num#", "desc"+job+"B").replace("%data%", work.jobs[job].descript[1]);
+        var formattedJobDescription3 = HTMLworkDescription3.replace("#num#", "desc"+job+"C").replace("%data%", work.jobs[job].descript[2]);
         //append all formatted items to the last added work-entry div
         var selector = "#work"+job;
         if (job%2 == 0) {
@@ -170,6 +179,7 @@ work.display = function() {
             $(selector).children('#rightCol').append(formattedJobDescription3);
         };
     };
+
 };
 
 
@@ -265,8 +275,7 @@ var education = {
 };
 // add function ot education  to display all date to the education section
 education.display = function() {
-
-     var formattedIcon = HTMLiconLeft.replace("%data%", education.icon);
+    var formattedIcon = HTMLiconLeft.replace("%data%", education.icon);
     var addToElement = $("#education");
     $(addToElement).prepend(formattedIcon);
     var test = $("#education").children(".icon-left").addClass("ed_icon");
@@ -304,7 +313,6 @@ education.display = function() {
         };
     };
 };
-
 
 function displayMap () {
     $("#mapDiv").append(googleMap);

@@ -42,9 +42,9 @@ var HTMLworkTitle = '<div id="work1_button" class="work-entry dark-gray"><p clas
 var HTMLworkEmployer = '<div class="gray center-text flex-box"><a class="black-title" href="#">%data%</a>';
 var HTMLworkDates = '<div class="date-text">%data%</div>';
 var HTMLworkLocation = '<div class="location-text">%data%</div></div>';
-var HTMLworkDescription1 = '<div class="work1A description green round">%data%</div>';
-var HTMLworkDescription2 = '<div class="work1B description red round">%data%</div>';
-var HTMLworkDescription3 = '<div class="work1C description blue round">%data%</div>';
+var HTMLworkDescription1 = '<div id="#num#" class="description blue round">%data%</div>';
+var HTMLworkDescription2 = '<div id="#num#" class="description green round">%data%</div>';
+var HTMLworkDescription3 = '<div id="#num#" class="description red round">%data%</div>';
 
 
 
@@ -82,6 +82,8 @@ var internationalizeButton = '<button>Internationalize</button>';
 var googleMap = '<div id="map"></div>';
 
 var bookChart = '<chart class="dark-gray"><div class="chartBox"></div></chart>';
+
+
 
 /*
 The International Name challenge in Lesson 2 where you'll create a function that will need this helper code to run. Don't delete! It hooks up your code to the button you'll be appending.
