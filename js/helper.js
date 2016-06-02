@@ -60,7 +60,6 @@ var HTMLprojectImage = '<div class="project-border flex-box"><a href="%link%"><i
 var HTMLprojectBreakLine = '<div class="breaker brown"><div>';
 
 
-
 var HTMLschoolStart = '<div class="education-entry"></div>';
 var HTMLschoolName = '<a class="title" href="#">%data%';
 var HTMLschoolDegree = ' -- %data%</a>';
@@ -75,13 +74,14 @@ var HTMLonlineDates = '<div class="date-text">%data%</div>';
 var HTMLonlineURL = '<br><a href="#">%data%</a>';
 var HTMLonlineIndivClass = '<div class="subtitle"><a class="white-text" href="%link%">%data%</a></div>';
 
-var HTMLiconLeft = '<img src="%data%" class="icon-left">'
-var HTMLiconRight = '<img src="%data%" class="icon-right">'
+var HTMLiconLeft = '<img src="%data%" class="icon-left">';
+var HTMLiconRight = '<img src="%data%" class="icon-right">';
+var HTMLiconCenter = '<img src="%data%" class="icon-center">';
 
 var internationalizeButton = '<button>Internationalize</button>';
 var googleMap = '<div id="map"></div>';
 
-var bookChart = '<chart class="dark-gray"><div class="chartBox"></div></chart>';
+var bookChart = '<div id="chart" class="dark-gray"><div class="chartBox"></div></div>';
 
 
 

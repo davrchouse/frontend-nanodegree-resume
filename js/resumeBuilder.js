@@ -320,10 +320,11 @@ var education = {
 };
 // add function ot education  to display all date to the education section
 education.display = function() {
+    var EdSection = $("#education");
     var formattedIcon = HTMLiconLeft.replace("%data%", education.icon);
-    var addToElement = $("#education");
-    $(addToElement).prepend(formattedIcon);
-    var test = $("#education").children(".icon-left").addClass("ed_icon");
+    $("#education .projectHeader").prepend(formattedIcon);
+
+    // var test = EdSection.children(".icon-left").addClass("ed_icon");
 
     for (school in education.schools) {
     //for each school create a new div with education-entry class
@@ -366,9 +367,9 @@ function displayMap () {
 function addBookChart () {
     var findChartBox = $("#content2");
     findChartBox.append(bookChart);
-    var formattedTeachIcon = HTMLiconLeft.replace("%data%", bio.teaching.icon);
-    $("chart").append(formattedTeachIcon);
-     $("chart").append(HTMLteachStart);
+    var formattedTeachIcon = HTMLiconCenter.replace("%data%", bio.teaching.icon);
+    $("#chart").append(formattedTeachIcon);
+     $("#chart").append(HTMLteachStart);
 }
 
 // -----run all the display functions
