@@ -115,7 +115,9 @@ var work = {
                 "• Strong background to teach a wide range of science and mathematics with special emphasis on project-based and experimental learning models.",
                 "• Created adaptive and individualized instruction for college, high school, and elementary students with over 500 hours of one on one teaching.",
                 "• Currently learning front-end web development at Udacity to create interactive educational content for students."
-                ]
+                ],
+            "descriptType": ["blue","green","red"],
+            "url": "https://www.wyzant.com/"
         },
      {
             "title": "Postdoctoral Fellow in Neuroscience",
@@ -127,19 +129,23 @@ var work = {
                 "• Biological research to understand how the brain encodes reward and motivation during learning.",
                 "• Offered advanced lectures, seminars on topics ranging from physiology to mechanisms of addiction.",
                 "• Independently developed unique electrical, optical, and analytical tools (MATLAB) for electrical recordings."
-                ]
+                ],
+            "descriptType": ["blue","green","red"],
+            "url": "http://www.addictionscience.unige.ch/"
         },
      {
             "title": "Graduate Student in Neuroscience",
-            "employer": "University of California, San Diego",
+            "employer": "UC San Diego",
             "location": "San Diego, CA",
             "dates": "2004 - 2010",
             "descript":
                 [
-                "• Discovered mechanisms of learning and information processing at the level of synapses and brain circuits.",
                 "• Student instructor for courses at UCSD and Woods Hole Marine Biological Laboratory. Composed outstanding class exams, visual presentations of concepts, and lectures.",
-                "• Gained extensive expertise in experimental design and techniques including molecular biology, microscopy, and electrophysiology. • Coded complex acquistion and analysis software for electrical recording data (IGOR)"
-                ]
+                "• Gained extensive expertise in experimental design and techniques including molecular biology, microscopy, and electrophysiology. <br>• Coded complex acquistion and analysis software for electrical recording data (IGOR)",
+                "• Discovered mechanisms of learning and information processing at the level of synapses and brain circuits.",
+                ],
+             "descriptType": ["green","red","blue"],
+            "url": "http://mcb.berkeley.edu/labs/feldman/index.html"
         }
     ],
     "icon": "images/icons/experience_icon.svg"
@@ -155,17 +161,34 @@ work.display = function() {
         $("#workExperience").append(formattedWorkDiv);
         //format title, employer
         var formattedTitle = HTMLworkTitle.replace("#num#", job).replace("%data%", work.jobs[job].title);
-        var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
+        var formattedEmployer = HTMLworkEmployer.replace("%link%", work.jobs[job].url).replace("%data%", work.jobs[job].employer);
         //format work dates, location, and description
         var formattedJobDates = HTMLworkDates.replace("%data%", work.jobs[job].dates);
         var formattedJobLocation = HTMLworkLocation.replace("%data%", work.jobs[job].location);
         // then concat all into html
         var formattedJobInfo = formattedTitle+formattedEmployer+formattedJobDates+formattedJobLocation;
         //format each green, red, or blue div with the 3 descriptions for each job
-        var formattedJobDescription1 = HTMLworkDescription1.replace("#num#", "desc"+job+"A").replace("%data%", work.jobs[job].descript[0]);
-        var formattedJobDescription2 = HTMLworkDescription2.replace("#num#", "desc"+job+"B").replace("%data%", work.jobs[job].descript[1]);
-        var formattedJobDescription3 = HTMLworkDescription3.replace("#num#", "desc"+job+"C").replace("%data%", work.jobs[job].descript[2]);
-        //append all formatted items to the last added work-entry div
+        // var descript1 = work.jobs[job].orderDescriptions[0];
+        // var descript2 = work.jobs[job].orderDescriptions[1];
+        // var descript3 = work.jobs[job].orderDescriptions[2];
+        // console.log(descript1,descript2,descript3);
+        // descriptVars = {};
+        // descriptVars["formattedJobDescription"+work.jobs[job].orderDescriptions[0]] = HTMLworkDescription1.replace("#num#", "desc"+job+"A").replace("%data%", work.jobs[job].descript[0]);
+        // descriptVars["formattedJobDescription"+work.jobs[job].orderDescriptions[1]] = HTMLworkDescription2.replace("#num#", "desc"+job+"B").replace("%data%", work.jobs[job].descript[1]);
+        // descriptVars["formattedJobDescription"+work.jobs[job].orderDescriptions[2]] = HTMLworkDescription2.replace("#num#", "desc"+job+"B").replace("%data%", work.jobs[job].descript[2]);
+
+
+        // console.log(descriptVars)
+        var formattedJobDescription1 = HTMLworkDescription1.replace("#num#", "desc"+job+"A").replace("%color%", work.jobs[job].descriptType[0]).replace("%data%", work.jobs[job].descript[0]);
+        var formattedJobDescription2 = HTMLworkDescription2.replace("#num#", "desc"+job+"B").replace("%color%", work.jobs[job].descriptType[1]).replace("%data%", work.jobs[job].descript[1]);
+        var formattedJobDescription3 = HTMLworkDescription3.replace("#num#", "desc"+job+"C").replace("%color%", work.jobs[job].descriptType[2]).replace("%data%", work.jobs[job].descript[2]);
+
+        // //append all formatted items to the last added work-entry div
+        // Order1 = "formattedJobDescription"+work.jobs[job].orderDescriptions[0];
+        // Order2 = "formattedJobDescription"+work.jobs[job].orderDescriptions[1];
+        // Order3 = "formattedJobDescription"+work.jobs[job].orderDescriptions[2];
+
+
         var selector = "#work"+job;
         if (job%2 == 0) {
             $(selector).children('#rightCol').append(formattedJobInfo);
@@ -192,12 +215,13 @@ work.display = function() {
     changeText("#desc1A", "Biological research","white-text2");
     changeText("#desc1A", "encodes reward and motivation","white-text2");
     changeText("#desc1A", "mechanisms of learning","white-text2");
-    changeText("#desc2A", "mechanisms of learning","white-text2");
-    changeText("#desc2A", "information processing","white-text2");
-    changeText("#desc2C", "expertise in experimental design and techniques","white-text2");
-    changeText("#desc2C", "complex acquistion and analysis software","white-text2");
-    changeText("#desc2B", "instructor for courses","white-text2");
-    changeText("#desc2B", "visual presentations of concepts","white-text2");
+    changeText("#desc2C", "mechanisms of learning","white-text2");
+    changeText("#desc2C", "information processing","white-text2");
+    changeText("#desc2B", "expertise in experimental design and techniques","white-text2");
+    changeText("#desc2B", "complex acquistion and analysis software","white-text2");
+    changeText("#desc2A", "instructor for courses","white-text2");
+    changeText("#desc2A", "visual presentations of concepts","white-text2");
+    // changeText("#desc2A", "visual presentations of concepts","white-text2");
 
 // interactive educational content
 
@@ -232,7 +256,7 @@ projects.display = function() {
         $(".project-entry:last").append(HTMLprojectBox);
 
         //format and append the project title, dates, description, and images
-        var formattedProjectTitle = HTMLprojectTitle.replace("%data%", projects.all[project].title);
+        var formattedProjectTitle = HTMLprojectTitle.replace("%link%", projects.all[project].url).replace("%data%", projects.all[project].title);
         var formattedProjectDates = HTMLprojectDates.replace("%data%", projects.all[project].dates);
         var formattedProjectDescription = HTMLprojectDescription.replace("%data%", projects.all[project].description);
         $(".project-info:last").append(formattedProjectTitle,formattedProjectDates,formattedProjectDescription);

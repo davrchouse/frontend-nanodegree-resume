@@ -37,14 +37,14 @@ var HTMLwhiteDots = '<span class="white-dot">%data%<span>'
 var HTMLteachStart = '<h2 id="teach-h2">Teaching Subjects</h2><ul id="subjects"></ul>';
 
 
-var HTMLworkStart = '<div id="work#num#" class="flex-box gray"><div id="leftCol" class="flex-box"></div><div id="separator" class="brown"></div><div id="rightCol" class="flex-box"></div></div>';
-var HTMLworkTitle = '<div id="work#num#_button" class="work-entry dark-gray" onclick="WorkSectionClick(this)"><p class="white-title">%data%</p></div>';
-var HTMLworkEmployer = '<div class="gray center-text flex-box"><a class="black-title" href="#">%data%</a>';
+var HTMLworkStart = '<div id="work#num#" class="flex-box gray"><div id="leftCol" class="flex-box"></div><div class="separator brown"><div class="trackball dark-gray"></div></div><div id="rightCol" class="flex-box"></div></div>';
+var HTMLworkTitle = '<div id="work#num#_button" class="work-entry" onclick="WorkSectionClick(this)"><div class="dark-gray white-title">%data%</div>';
+var HTMLworkEmployer = '<div class="gray center-text flex-box"><a class="black-title" href="%link%">%data%</a>';
 var HTMLworkDates = '<div class="date-text">%data%</div>';
-var HTMLworkLocation = '<div class="location-text">%data%</div></div>';
-var HTMLworkDescription1 = '<div id="#num#" class="description blue round">%data%</div>';
-var HTMLworkDescription2 = '<div id="#num#" class="description green round">%data%</div>';
-var HTMLworkDescription3 = '<div id="#num#" class="description red round">%data%</div>';
+var HTMLworkLocation = '<div class="location-text">%data%</div></div></div>';
+var HTMLworkDescription1 = '<div id="#num#" class="description %color% round">%data%</div>';
+var HTMLworkDescription2 = '<div id="#num#" class="description %color% round">%data%</div>';
+var HTMLworkDescription3 = '<div id="#num#" class="description %color% round">%data%</div>';
 
 
 
@@ -52,7 +52,7 @@ var HTMLworkDescription3 = '<div id="#num#" class="description red round">%data%
 
 var HTMLprojectStart = '<div class="project-entry flex-box"></div>';
 var HTMLprojectBox = '<div class="project-info"></div>';
-var HTMLprojectTitle = '<a class="black-title" href="#">%data%</a>';
+var HTMLprojectTitle = '<div class="limitLinkLength"><a class="title" href="%link%">%data%</a></div>';
 
 var HTMLprojectDates = '<div class="date-text">%data%</div>';
 var HTMLprojectDescription = '<p><br>%data%</p>';
@@ -66,14 +66,14 @@ var HTMLschoolName = '<a class="title" href="#">%data%';
 var HTMLschoolDegree = ' -- %data%</a>';
 var HTMLschoolDates = '<div class="date-text">%data%</div>';
 var HTMLschoolLocation = '<div class="location-text">%data%</div>';
-var HTMLschoolMajor = '<em class="white-text"><br>Major: %data%</em>';
+var HTMLschoolMajor = '<p class="white-text subtitle">Major: %data%</p>';
 
 var HTMLonlineClasses = '<h3 id="onlineHeader">Online Classes</h3>';
 var HTMLonlineTitle = '<a class="title" href="#">%data%';
 var HTMLonlineSchool = ' - %data%</a>';
 var HTMLonlineDates = '<div class="date-text">%data%</div>';
 var HTMLonlineURL = '<br><a href="#">%data%</a>';
-var HTMLonlineIndivClass = '<em><a class="white-text subtitle" href="%link%">%data%</a></em>';
+var HTMLonlineIndivClass = '<div class="subtitle"><a class="white-text" href="%link%">%data%</a></div>';
 
 var HTMLiconLeft = '<img src="%data%" class="icon-left">'
 var HTMLiconRight = '<img src="%data%" class="icon-right">'
