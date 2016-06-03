@@ -231,7 +231,7 @@ var projects = {
             "title": "Online Resume",
             "dates": "May 2015",
             "description": "Customized an online resume by using Javascript, jQuery, CSS, and HTML; and wrote functions for interactive page events. The page is responsive and works on mobile, tablet, and desktop browsers.",
-            "images": ["images/portfolio_pics/full.jpg"],
+            "images": ["images/resume_pics/full.jpg"],
             "url": "https://github.com/davrchouse/frontend-nanodegree-resume"
         }
     ]
