@@ -66,6 +66,7 @@ a {
 
 a:hover {
   color: #CE80A4;
+  text-decoration: none;
 }
 
 ul {
@@ -117,7 +118,7 @@ span {
 }
 
 .icon-right {
-    height: 40px;
+    height: 61px;
     float: left;
  /*   margin-left: auto;*/
     padding: 10px 10px 10px 18px;
@@ -401,21 +402,20 @@ div.project-border a {
 }
 
 .project-image {
-   box-shadow: 0 4px 8px 0 rgba(100, 100, 100, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
- /* max-width: 450px;*/
-  width: calc((100% - 20px));
-  height: calc((100% - 20px));
-/*  border: 10px solid black;
-*/ -webkit-border-radius: 25px;
+  box-shadow: 0 4px 8px 0 rgba(100, 100, 100, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  width: 100%;
+  -webkit-border-radius: 25px;
   -moz-border-radius: 25px;
-  border-radius: 40px;
-/*  margin-right: auto;
-  margin-left: auto;*/
+  border-radius: 25px;
 }
 
 .project-image:hover {
    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.25);
 
+}
+
+a.project-link {
+  width: 80%;
 }
 
 
@@ -508,6 +508,9 @@ overflow: auto;
   width: 50%;
   order:2;
   margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
 }
 
 /* Work Section */
@@ -566,6 +569,19 @@ overflow: auto;
 .description:hover {
   cursor: pointer;
 }
+
+/* Tooltip */
+  .icon + .tooltip > .tooltip-inner {
+      background-color: #2E3C3D;
+      color: #FFFFFF;
+      padding: 5px;
+      font-size: 12px;
+  }
+
+/* Tooltip on bottom */
+  .icon + .tooltip.bottom > .tooltip-arrow {
+      border-bottom: 5px solid #2E3C3D;
+ }
 
 
 #leftCol {
@@ -737,6 +753,12 @@ align-items: flex-end;*/
     visibility: visible;
   }
 
+  .project-image {
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
+}
+
   #education {
     display: flex;
     flex-direction: row;
@@ -763,6 +785,8 @@ align-items: flex-end;*/
 
   #chart {
     width: 80%;
+    margin-left: auto;
+    margin-right: auto;
   }
 
 

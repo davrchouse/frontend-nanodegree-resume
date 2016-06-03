@@ -55,7 +55,7 @@ var HTMLprojectTitle = '<div class="limitLinkLength"><a class="title" href="%lin
 
 var HTMLprojectDates = '<div class="date-text">%data%</div>';
 var HTMLprojectDescription = '<p><br>%data%</p>';
-var HTMLprojectImage = '<div class="project-border flex-box"><a href="%link%"><img src="%data%" class="project-image"></a><div>';
+var HTMLprojectImage = '<div class="project-border flex-box"><a class="project-link" href="%link%"><img src="%data%" class="project-image"></a><div>';
 var HTMLprojectBreakLine1 = '<div class="breakerOne brown"><div>';
 var HTMLprojectBreakLine = '<div class="breaker brown"><div>';
 
@@ -70,7 +70,7 @@ var HTMLschoolMajor = '<p class="white-text subtitle">Major: %data%</p>';
 var HTMLonlineSchoolStart = '<div class="online-education-entry"></div>';
 var HTMLonlineClasses = '<h3 id="onlineHeader">Online Classes</h3>';
 var HTMLonlineTitle = '<a class="title" href="#">%data%';
-var HTMLonlineSchool = ' - %data%</a>';
+var HTMLonlineSchool = ' -- %data%</a>';
 var HTMLonlineDates = '<div class="date-text">%data%</div>';
 var HTMLonlineURL = '<br><a href="#">%data%</a>';
 var HTMLonlineIndivClass = '<div class="subtitle"><a class="white-text" href="%link%">%data%</a></div>';

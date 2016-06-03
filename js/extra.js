@@ -29,6 +29,12 @@ function WorkSectionClick(e) {
     }
 
 
+$(document).ready(function(){
+      $('.icon').tooltip({title: "Click for More Info", animation: true, placement: "bottom", delay: {show: 2000, hide: 0} });
+   });
+
+
+
 //  if (thisDiv.hasClass('openable')) {
 //         if (thisDiv.hasClass('closed')) {
 //             thisDiv.siblings().find("p.toggleText").removeClass("show").addClass("none");
