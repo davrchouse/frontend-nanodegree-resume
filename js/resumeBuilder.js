@@ -32,10 +32,7 @@ bio.display = function() {
     $("#header").prepend(formattedName);
 
     //add in contacts info to the top and bottom of the page
-    var formattedcontactInfo = HTMLmobile.replace("%data%",bio.contacts.mobile)
-    +HTMLemail.replace("%data%",bio.contacts.email[0])
-    +HTMLgithub.replace("%data%",bio.contacts.github[0])
-    +HTMLlocation.replace("%data%",bio.contacts.loc);
+    var formattedcontactInfo = HTMLmobile.replace("%data%",bio.contacts.mobile)+HTMLemail.replace("%data%",bio.contacts.email[0])+HTMLgithub.replace("%data%",bio.contacts.github[0])+HTMLlocation.replace("%data%",bio.contacts.loc);
     $("#topContacts").append(formattedcontactInfo);
     $("#footerContacts").append(formattedcontactInfo);
     $(".email").attr("href",bio.contacts.email[1]);
@@ -67,12 +64,12 @@ bio.display = function() {
     for (var i = 0; i < skills_length; i++) {
         var formattedSkill = HTMLskills.replace("%data%", bio.skills.skillList[i]);
         $("#skills").append(formattedSkill);
-    };
+    }
     //add a rating system of diamonds for the programming proficiency levels
-    var starsTwo = "&nbsp; &loz; &loz;"
-    var starsThree = "&nbsp; &loz; &loz; &loz;"
-    var dotsThree = "&bull; &bull; &bull;"
-    var dotsTwo = "&bull; &bull;"
+    var starsTwo = "&nbsp; &loz; &loz;";
+    var starsThree = "&nbsp; &loz; &loz; &loz;";
+    var dotsThree = "&bull; &bull; &bull;";
+    var dotsTwo = "&bull; &bull;";
     var formmattedTwoStars = HTMLbrownStars.replace("%data%", starsTwo)+HTMLwhiteDots.replace("%data%", dotsThree);
     var formmattedThreeStars = HTMLbrownStars.replace("%data%", starsThree)+HTMLwhiteDots.replace("%data%", dotsTwo);
 
@@ -86,21 +83,23 @@ bio.display = function() {
     addStars("HTML",formmattedThreeStars);
     addStars("CSS",formmattedThreeStars);
     addStars("Javascript",formmattedTwoStars);
-}
+};
 
-  /*
+
+
+/*
 Code I wrote to change the color of certain text words in any span.
 Uses class names that change font color...
 */
 
 function changeText(targetElement,textToChange,newClass){
     var oldHTML = $(targetElement).html();
-    //console.log(oldHTML);
     var addTextHTML = '<span class="'+newClass+'">'+textToChange+'</span>';
     var newHTML = oldHTML.replace(textToChange,addTextHTML);
-    //console.log(newHTML);
-    $(targetElement).html(newHTML)
+    $(targetElement).html(newHTML);
     }
+
+
 
 // -----Work object for each job (employer, title, dates, description, and location)
 var work = {
@@ -159,12 +158,10 @@ var work = {
 // add function to work object to display all data to work section
 work.display = function() {
     var formattedIcon = HTMLiconLeft.replace("%data%", work.icon);
-    // var formattedIcon2 = HTMLicon.replace("%data%", work.icons[1]);
     var addToElement = $("#workExperience").children(".projectHeader");
     $(addToElement).prepend(formattedIcon);
-    // $(addToElement).append(formattedIcon2);
 
-    for (job in work.jobs) {
+    for (var job in work.jobs) {
         //for each job create a new div with work-entry class
         var formattedWorkDiv = HTMLworkStart.replace("#num#", job);
         $("#workExperience").append(formattedWorkDiv);
@@ -184,7 +181,7 @@ work.display = function() {
         var formattedJobDescription3 = HTMLworkDescription3.replace("#num#", "desc"+job+"C").replace("%color%", work.jobs[job].descriptType[2]).replace("%data%", work.jobs[job].descript[2]);
 
         var selector = "#work"+job;
-        if (job%2 == 0) {
+        if (job%2 === 0) {
             $(selector).children('#rightCol').append(formattedJobInfo);
             $(selector).children('#rightCol').append(formattedJobDescription1);
             $(selector).children('#leftCol').append(formattedJobIcon);
@@ -196,32 +193,28 @@ work.display = function() {
             $(selector).children('#rightCol').append(formattedJobIcon);
             $(selector).children('#rightCol').append(formattedJobDescription2);
             $(selector).children('#rightCol').append(formattedJobDescription3);
-        };
-    };
-    // changeText(targetElement,textToChange,newClass){
-    // var oldHTML = $(targetElement).html();
-    changeText("#desc0B", "college, high school, and elementary","white-text2");
-    changeText("#desc0B", "over 500 hours","white-text2");
-    changeText("#desc0C", "interactive educational content","white-text2");
-    changeText("#desc0C", "front-end web development","white-text2");
-    changeText("#desc0A", "science and mathematics","white-text2");
-    changeText("#desc0A", "project-based and experimental learning","white-text2");
-    changeText("#desc1C", "unique electrical, optical, and analytical tools","white-text2");
-    changeText("#desc1B", "lectures, seminars","white-text2");
-    changeText("#desc1A", "Biological research","white-text2");
-    changeText("#desc1A", "encodes reward and motivation","white-text2");
-    changeText("#desc1A", "mechanisms of learning","white-text2");
-    changeText("#desc2C", "mechanisms of learning","white-text2");
-    changeText("#desc2C", "information processing","white-text2");
-    changeText("#desc2B", "expertise in experimental design and techniques","white-text2");
-    changeText("#desc2B", "complex acquistion and analysis software","white-text2");
-    changeText("#desc2A", "instructor for courses","white-text2");
-    changeText("#desc2A", "visual presentations of concepts","white-text2");
-    // changeText("#desc2A", "visual presentations of concepts","white-text2");
-
-// interactive educational content
-
+        }
+    }
+    // highlight some text in the descriptions section with white text
+    changeText("#desc0B", "college, high school, and elementary","white-text-no-padding");
+    changeText("#desc0B", "over 500 hours","white-text-no-padding");
+    changeText("#desc0C", "interactive educational content","white-text-no-padding");
+    changeText("#desc0C", "front-end web development","white-text-no-padding");
+    changeText("#desc0A", "science and mathematics","white-text-no-padding");
+    changeText("#desc0A", "project-based and experimental learning","white-text-no-padding");
+    changeText("#desc1C", "unique electrical, optical, and analytical tools","white-text-no-padding");
+    changeText("#desc1B", "lectures, seminars","white-text-no-padding");
+    changeText("#desc1A", "Biological research","white-text-no-padding");
+    changeText("#desc1A", "encodes reward and motivation","white-text-no-padding");
+    changeText("#desc1A", "mechanisms of learning","white-text-no-padding");
+    changeText("#desc2C", "mechanisms of learning","white-text-no-padding");
+    changeText("#desc2C", "information processing","white-text-no-padding");
+    changeText("#desc2B", "expertise in experimental design and techniques","white-text-no-padding");
+    changeText("#desc2B", "complex acquistion and analysis software","white-text-no-padding");
+    changeText("#desc2A", "instructor for courses","white-text-no-padding");
+    changeText("#desc2A", "visual presentations of concepts","white-text-no-padding");
 };
+
 
 
 // -----Projects object with personal projects
@@ -246,7 +239,7 @@ var projects = {
 // add function to projects to display all data to projects section
 projects.display = function() {
     $("#projects").append(HTMLprojectBreakLine1);
-    for (project in projects.all) {
+    for (var project in projects.all) {
         //for each project create a new div with project-entry class
         $("#projects").append(HTMLprojectStart);
         $(".project-entry:last").append(HTMLprojectBox);
@@ -257,17 +250,19 @@ projects.display = function() {
         var formattedProjectDescription = HTMLprojectDescription.replace("%data%", projects.all[project].description);
         $(".project-info:last").append(formattedProjectTitle,formattedProjectDates,formattedProjectDescription);
         //format image and append all the images
-        for (image in projects.all[project].images) {
+        for (var image in projects.all[project].images) {
             var formattedProjectImage = HTMLprojectImage.replace("%data%", projects.all[project].images[image]);
             var nextFormattedProjectImage = formattedProjectImage.replace("%link%", projects.all[project].url);
             $(".project-entry:last").append(nextFormattedProjectImage);
-        };
+        }
         var selectTitle = $(".project-info:last").children(".title");
         $(selectTitle).attr("href",projects.all[project].url);
         $("#projects").append(HTMLprojectBreakLine);
-    };
+    }
 };
 // -----Projects object with personal projects
+
+
 
 var education = {
     "schools": [
@@ -322,7 +317,7 @@ education.display = function() {
 
     // var test = EdSection.children(".icon-left").addClass("ed_icon");
 
-    for (school in education.schools) {
+    for (var school in education.schools) {
     //for each school create a new div with education-entry class
         $("#education").append(HTMLschoolStart);
         var formattedSchoolName = HTMLschoolName.replace("%data%", education.schools[school].name);
@@ -332,13 +327,13 @@ education.display = function() {
         var formattedSchoolLocation = HTMLschoolLocation.replace("%data%", education.schools[school].city);
         var formattedSchoolMajor = HTMLschoolMajor.replace("%data%", education.schools[school].major);
         $(".education-entry:last").append(formattedSchoolNameDegree,formattedSchoolDates,formattedSchoolLocation,formattedSchoolMajor);
-        var selectTitle = $(".education-entry:last").children(".title");
-        $(selectTitle).attr("href",education.schools[school].url);
-    };
+        var selectTitle2 = $(".education-entry:last").children(".title");
+        $(selectTitle2).attr("href",education.schools[school].url);
+    }
     //add an Online Classes header
     $("#education").append(HTMLonlineClasses);
     //for each online School create a new div with all the courses taken
-    for (onlineClass in education.onlineCourses) {
+    for (var onlineClass in education.onlineCourses) {
         $("#education").append(HTMLonlineSchoolStart);
         var formattedOnlineTitle = HTMLonlineTitle.replace("%data%", education.onlineCourses[onlineClass].school);
         var formattedOnlineSchool = HTMLonlineSchool.replace("%data%", education.onlineCourses[onlineClass].title);
@@ -348,17 +343,21 @@ education.display = function() {
         var selectTitle = $(".online-education-entry:last").children(".title");
         $(selectTitle).attr("href",education.onlineCourses[onlineClass].url);
        //add the list of all the courses taken at Udacity for the Front End Dev Nanodegree
-        for (course in education.onlineCourses[onlineClass].courseList) {
+        for (var course in education.onlineCourses[onlineClass].courseList) {
             var formattedOnlineIndivClass = HTMLonlineIndivClass.replace("%data%", education.onlineCourses[onlineClass].courseList[course]);
             var formattedClassWithURL = formattedOnlineIndivClass.replace("%link%", education.onlineCourses[onlineClass].coureURL[course]);
             $(".online-education-entry:last").append(formattedClassWithURL);
-        };
-    };
+        }
+    }
 };
+
+
 
 function displayMap () {
     $("#mapDiv").append(googleMap);
 }
+
+
 
 function addBookChart () {
     var findChartBox = $("#content2");
@@ -376,14 +375,6 @@ bio.display();
 education.display();
 displayMap();
 addBookChart();
-
-
-
-
-
-
-
-
 
 
 // function locationizer(_work_) {

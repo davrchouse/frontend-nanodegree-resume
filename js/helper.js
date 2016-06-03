@@ -12,6 +12,8 @@ Cameron Pittman
 These are HTML strings. As part of the course, you'll be using JavaScript functions
 replace the %data% placeholder text you see in them.
 */
+
+/* for Header Section*/
 var HTMLheaderName = '<h1 id="name">%data%</h1>';
 var HTMLheaderRole = '<span class="brown-text" id="role">%data%</span><hr>';
 
@@ -26,40 +28,39 @@ var HTMLlocation = '<li class="flex-item"><span class="brown-text">location</spa
 var HTMLbioPic = '<img src="%data%" class="biopic">';
 var HTMLprofileStart = '<div id="profile"><h2>Profile</h2></div>';
 var HTMLwelcomeMsg = '<p class="welcome-message">%data%</p>';
-var HTMLblueText = '<span class="blue">%data%</span>'
+var HTMLblueText = '<span class="blue">%data%</span>';
 
-var HTMLskillsHeader = '<h2 id="skills-h2">Skills</h2>'
+/* for Skills Section*/
+var HTMLskillsHeader = '<h2 id="skills-h2">Skills</h2>';
 var HTMLskillsStart = '<ul id="skills" class="flex-box"></ul>';
 var HTMLskills = '<li class="flex-item"><span class="right">%data%</span></li>';
-var HTMLbrownStars = '<span class="brown-star">%data%<span>'
-var HTMLwhiteDots = '<span class="white-dot">%data%<span>'
+var HTMLbrownStars = '<span class="brown-star">%data%<span>';
+var HTMLwhiteDots = '<span class="white-dot">%data%<span>';
 
+
+/* for Work Section*/
 var HTMLworkStart = '<div id="work#num#" class="flex-box gray"><div id="leftCol" class="flex-box"></div><div class="separator brown"><div class="trackball dark-gray"></div></div><div id="rightCol" class="flex-box"></div></div>';
 var HTMLworkTitle = '<div id="work#num#_button" class="work-entry"><div class="dark-gray white-title">%data%</div>';
 var HTMLworkEmployer = '<div class="gray center-text flex-box"><a class="black-title" href="%link%">%data%</a>';
 var HTMLworkDates = '<div class="date-text">%data%</div>';
 var HTMLworkLocation = '<div class="location-text">%data%</div></div></div>';
-// var HTMLworkOverview = '<div id="#num#" class="workOverview">%data%</div>';
 var HTMLworkDescription1 = '<div id="#num#" class="description %color% round" onclick="WorkSectionClick(this)">%data%</div>';
 var HTMLworkDescription2 = '<div id="#num#" class="description %color% round" onclick="WorkSectionClick(this)">%data%</div>';
 var HTMLworkDescription3 = '<div id="#num#" class="description %color% round" onclick="WorkSectionClick(this)">%data%</div>';
-var HTMLicon = '<img id="#num#" src="%data%" class="icon" onclick="WorkSectionClick(this)">';
+var HTMLicon = '<div id="#num#" class="work-icon" onclick="WorkSectionClick(this)"><img src="%data%" class="icon"><br>click for more...<br><div>';
 
-
-
-
-
+/* for Project Section*/
 var HTMLprojectStart = '<div class="project-entry flex-box"></div>';
 var HTMLprojectBox = '<div class="project-info"></div>';
 var HTMLprojectTitle = '<div class="limitLinkLength"><a class="title" href="%link%">%data%</a></div>';
 
 var HTMLprojectDates = '<div class="date-text">%data%</div>';
 var HTMLprojectDescription = '<p><br>%data%</p>';
-var HTMLprojectImage = '<div class="project-border flex-box"><a class="project-link" href="%link%"><img src="%data%" class="project-image"></a><div>';
+var HTMLprojectImage = '<div class="project-border flex-box"><div class="project-link-container"><a class="project-link" href="%link%"><img src="%data%" class="project-image"></a><div class="github-link">GITHUB LINK</div></div></div>';
 var HTMLprojectBreakLine1 = '<div class="breakerOne brown"><div>';
 var HTMLprojectBreakLine = '<div class="breaker brown"><div>';
 
-
+/* for Education Section*/
 var HTMLschoolStart = '<div class="education-entry"></div>';
 var HTMLschoolName = '<a class="title" href="#">%data%';
 var HTMLschoolDegree = ' -- %data%</a>';
@@ -75,13 +76,16 @@ var HTMLonlineDates = '<div class="date-text">%data%</div>';
 var HTMLonlineURL = '<br><a href="#">%data%</a>';
 var HTMLonlineIndivClass = '<div class="subtitle"><a class="white-text" href="%link%">%data%</a></div>';
 
+/* for icons in each section*/
 var HTMLiconLeft = '<img src="%data%" class="icon-left">';
 var HTMLiconRight = '<img src="%data%" class="icon-right">';
 var HTMLiconCenter = '<img src="%data%" class="icon-center">';
 
+/* for Map Section*/
 var internationalizeButton = '<button>Internationalize</button>';
 var googleMap = '<div id="map"></div>';
 
+/* for Teaching Subjects Section*/
 var bookChart = '<div id="chart" class="dark-gray"><div class="chartBox"></div></div>';
 var HTMLteachStart = '<div id="subjectsHead"><h2 id="teach-h2">Teaching Subjects</h2><ul id="subjects"></ul></div>';
 

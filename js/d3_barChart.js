@@ -13,10 +13,10 @@ var widthOfBooks = 0;
 var bookLengths = [];
 
 function makeChart(dataset) {
-    for (book in dataset) {
+    for (var book in dataset) {
         var eachBooklength = teaching.subjects[book].length;
         bookLengths[book] = eachBooklength;
-    };
+    }
     // console.log(bookLengths);
     var numBooks = (dataset).length;
     var widthOfBooks = ((100 - (numBooks*0.5))/numBooks);
@@ -46,7 +46,7 @@ function makeChart(dataset) {
             }})
         .text(function(dataset) {
             return dataset;
-        })
+        });
     }
 
 
@@ -54,26 +54,3 @@ function makeChart(dataset) {
 
 makeChart(teaching.subjects);
 
-
-
-
-
- // var dataset = [5,10,15,20,25];
-
- //    d3.select('chart').selectAll('div')
- //        .data(dataset)
- //        .enter()
- //        .append('div')
- //        .attr('class','bar')
- //        .style('height',function(d) {
- //            return d * 5 + 'px';
- //        });
-
-
-// function yoit() {
-//     alert("yo yo yo what up?");
-// }
-
-// $('body').append("<div>Hellloooo</div>");
-
-// yoit();

@@ -33,30 +33,3 @@ $(document).ready(function(){
       $('.icon').tooltip({title: "Click for More Info", animation: true, placement: "bottom", delay: {show: 2000, hide: 0} });
    });
 
-
-
-//  if (thisDiv.hasClass('openable')) {
-//         if (thisDiv.hasClass('closed')) {
-//             thisDiv.siblings().find("p.toggleText").removeClass("show").addClass("none");
-//             thisDiv.find("p.toggleText").removeClass("none").addClass("show");
-//         } else {
-//             thisDiv.siblings().find("p.toggleText").addClass("none").removeClass("show");
-//             thisDiv.find("p.toggleText").removeClass("none").addClass("show");
-//         }
-//         thisDiv.removeClass('openable').addClass("open").removeClass('closed');
-//         thisDiv.animate({width: '70%'}, 'slow');
-//         thisDiv.siblings().addClass('closed').addClass("openable").removeClass("open").animate({width: '15%'}, 'slow');
-//         thisDiv.siblings().find(".jobInfo").css('position','relative').css('top', '+70px');
-//         thisDiv.find(".jobInfo").css('position','relative').css('top', '0px');
-//     }
-// else if (thisDiv.hasClass('open'))
-//     {
-//     thisDiv.removeClass('open').removeClass("openable");
-//     thisDiv.animate({width: '33.3%'}, 'slow');
-//     thisDiv.siblings().animate({width: '33.3%'}, 'slow');
-//     thisDiv.siblings().find("p.toggleText").removeClass("none").addClass("show");
-//     thisDiv.siblings().find(".jobInfo").css('position','relative').css('top', '0px');
-//     }
-// }
-
-

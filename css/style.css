@@ -9,8 +9,8 @@ h3,
 h4,
 h5,
 h6 {
-  padding:0;
-  margin:0;
+  padding: 0;
+  margin: 0;
   font-family: "Lato", sans-serif;
   font-weight: 300;
   box-sizing: border-box;
@@ -33,7 +33,6 @@ h2 {
   text-transform: uppercase;
   font-size: 24px;
   line-height: 29px;
-/*  padding: 10px;*/
   color: #AA7552;
 }
 
@@ -43,12 +42,10 @@ h4 {
   line-height: 17px;
 }
 
-
 h3,
 h4,
 h5 {
   padding:10px 5%;
-
 }
 
 p {
@@ -73,13 +70,6 @@ ul {
   list-style-type: none;
 }
 
-.biopic {
-  float: left;
-  padding: 5px 10px 10px 10px;
-  width: 175px;
-  margin-right: 20px;
-}
-
 span {
   padding: 5px;
 }
@@ -93,34 +83,38 @@ span {
   padding: 0;
 }
 
-/*.flex-item {
-  padding-top: 5px;
-}
-*/
 .center-content {
   padding: 2.5% 5%;
 }
 
-
 /*Image and Icon classes*/
+
+.biopic {
+  float: left;
+  padding: 5px 10px 10px 10px;
+  width: 175px;
+  margin-right: 20px;
+}
 
 .icon {
   width: 100%;
   height: 100%;
   margin-top: 15%;
-
 }
 
-.icon:hover {
-  cursor: pointer;
-  box-shadow: 0 4px 8px 0 rgba(100, 100, 100, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+.work-icon {
+    height: 100%;
+    text-align: center;
+}
 
+.work-icon:hover {
+  cursor: pointer;
+  background-color: #CBCBCB;
 }
 
 .icon-right {
     height: 61px;
     float: left;
- /*   margin-left: auto;*/
     padding: 10px 10px 10px 18px;
 }
 
@@ -143,6 +137,7 @@ span {
 .brown {
   background-color: #AA7552;
 }
+
 .brown-text {
   color: #AA7552;
   font-weight: bold;
@@ -156,9 +151,10 @@ span {
 .white-text {
   color: #fff;
 }
-.white-text2 {
+
+.white-text-no-padding {
   color: #fff;
-  padding:0px;
+  padding: 0;
 }
 
 .white-title {
@@ -167,10 +163,30 @@ span {
   padding: 8px 5px;
 }
 
+.title {
+  font-size: 18px;
+  color: #2BBDC1;
+  padding: 15px 0 5px 0;
+}
+
+.black-title {
+  font-size: 18px;
+  color: black;
+  padding: 5px 0 5px 0;
+}
+
+.subtitle {
+  font-style: italic;
+  font-size: 16px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  display: block;
+}
 .green-text {
   color: #419928;
   font-weight: bold;
 }
+
 .green{
   background-color: #419928;
 }
@@ -202,17 +218,17 @@ span {
   background-color: #2E3C3D;
 }
 
-
-/*Layout Sections*/
+/*-Layout Sections-*/
 
 #main {
   padding: 2.5% 5%;
 }
 
-
-/*--header section*/
+/*----Header Section-*/
 
 #header {
+  width: 100%;
+  order:0;
   background-color: #2E3C3D;
   margin-bottom: 10px;
 }
@@ -225,7 +241,10 @@ span {
   margin-bottom: 20px;
 }
 
-.phone, .email, .github, .location {
+.phone,
+.email,
+.github,
+.location {
   padding: 5px;
   margin: 0;
   display: inline-block;
@@ -239,26 +258,23 @@ span {
   margin-bottom: 30px;
 }
 
-/*--conent1 section*/
+/*----Content Section */
 
 #content {
   width: 45%;
-  order:1;
+  order: 1;
   margin-right: 5%;
   margin-bottom: 30px;
 }
 
-/* Skills Section */
+/*--------Skills Section */
 
 #skillSection {
-  width: 100%;
-  order:0;
   margin-bottom: 30px;
- /* text-align: left;*/
 }
 
 #skillHeader {
-  width:100%;
+  width: 100%;
   display: inline-block;
 }
 
@@ -267,68 +283,35 @@ span {
   padding-bottom: 15px;
 
 }
+
 #skillList {
   width:100%;
-    display: flex;
+  display: flex;
   -webkit-column-count: 2;
-  -webkit-column-gap:   5px;
-  -moz-column-count:    2;
-  -moz-column-gap:      5px;
-  column-count:         2;
-  column-gap:           5px;
+  -webkit-column-gap: 5px;
+  -moz-column-count: 2;
+  -moz-column-gap: 5px;
+  column-count: 2;
+  column-gap: 5px;
 }
 
 #skills li{
   line-height: 28px;
   color: white;
-/*  float: left;*/
   padding-left: 10px;
 }
 
 .brown-star {
   color: #AA7552;
-  padding:0px;
+  padding: 0;
 }
 
 .white-dot {
   color: white;
-  padding:0px;
+  padding: 0;
 }
 
-/* Teaching Section */
-
-#teaching {
-  width: 50%;
-  display: none;
-  order:1;
-  margin-bottom: 30px;
-  text-align: right;
-  padding-right: 5%;
-}
-
-
-#teach-h2 {
-  line-height: 26px;
-/*  margin-left: auto;*/
-  padding: 15px 0 0 10px;
-
-}
-
-#subjectsHead {
-    width:100%;
-    display: inline-flex;
-    justify-content: center;
-}
-
-/*#subjects li{
-  line-height: 28px;
-  color: white;
-  text-align: right;
-  float: right;
-  width: 100%;
- /* clear:right;*/
-
-/* Projects Section */
+/*--------Projects Section */
 
 .project-entry {
   width: 100%;
@@ -336,7 +319,7 @@ span {
 
 #projects {
   width: 100%;
-  order:2;
+  order: 2;
   margin-bottom: 40px;
   padding-bottom: 0;}
 
@@ -352,112 +335,87 @@ span {
   background-color: #f3f3f3;
   order:0;
 }
+
 #project-brown {
   width: 50%;
   background-color: #AA7552;
-  order:0;
+  order: 0;
   visibility: hidden;
 }
 
 .project-info {
   width: 100%;
   padding: 2.5% 5%;
-  order:0;
+  order: 0;
 }
 
-.title {
-  font-size: 18px;
-  color: #2BBDC1;
-  padding: 15px 0 5px 0;
-}
-
-
-
-.black-title {
-  font-size: 18px;
-  color: black;
-  padding: 5px 0 5px 0;
-}
-
-
-.subtitle {
-  font-style: italic;
-  font-size: 16px;
-  margin-top: 5px;
-  margin-bottom: 5px;
-  display: block;
-
-}
-
-div.project-border {
+.project-border {
   width: 100%;
   background-color: #AA7552;
-  padding: 6% 3% 3% 3%;
-  max-height: 
+  padding: 10% 10% 6% 10%;
 }
 
+.project-link-container {
+  position: relative;
+  height: 100%;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  border-radius: 25px;
 
-div.project-border a {
- height: 100%;
+}
+
+.project-link-container:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.25);
 }
 
 .project-image {
   box-shadow: 0 4px 8px 0 rgba(100, 100, 100, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   width: 100%;
+  height: auto;
   -webkit-border-radius: 25px;
   -moz-border-radius: 25px;
   border-radius: 25px;
 }
 
-.project-image:hover {
-   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.25);
-
+.github-link {
+  color: white;
+  background-color: rgba(0,0,0,0.5);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 2% 2% 2% 15%;
+  width: 100%;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  border-radius: 0 0 25px 25px;
 }
-
-a.project-link {
-  width: 80%;
-}
-
 
 .breaker {
   width: 100%;
   height: 10px;
 }
 
-
-div.breakerOne {
+.breakerOne {
   width: 100%;
   height: 10px;
   display: block;
 }
 
-/* Education Section */
+/*--------Education Section */
 
 #education {
-  width: 100%;
   height: 100%;
   background-color: #2E3C3D;
-  order:3;
   margin-bottom: 30px;
   padding-left: 5%;
   padding-right: 5%;
   display: flex;
   flex-direction: column;
-  /*flex-direction: row;
-  flex-wrap: wrap;*/
-/*  justify-content: right;*/
-overflow: auto;
+  overflow: auto;
 }
-
 
 .limitLinkLength {
   display: inline-block;
-}
-
-.educaton-entry {
-/*  float: left;*/
-}
-
 }
 
 .ed_icon {
@@ -476,44 +434,18 @@ overflow: auto;
   width: 100%;
 }
 
-/* Map Section */
-
-#mapDiv {
-  background-color: #AA7552;
-  min-height: 250px;
-}
-
-#map-H2 {
-  width: 100%;
-  padding: 2.5% 5%;
-  background-color: #f3f3f3;
-  order:0;
-}
-
-/*#mapBox {
-  width: 100%;
-  background-color: #AA7552;
-}*/
-#map {
-  width: 100%;
-  height: 100%;
-  min-height: 250px;
-  margin: 5%;
-}
-
-
-/*--conent2 section*/
+/*----Content2 Section*/
 
 #content2 {
   width: 50%;
-  order:2;
+  order: 2;
   margin-bottom: 30px;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
 }
 
-/* Work Section */
+/*--------Work Section */
 
 #workExperience {
   height: 100%;
@@ -535,8 +467,6 @@ overflow: auto;
   color: #999;
   line-height: 16px;
   width: 100%;
-/*  text-align: center;
-  display: inline-block;*/
 }
 
 .location-text {
@@ -554,23 +484,15 @@ overflow: auto;
   z-index: 999;
 }
 
-
 .work-entry {
   text-align: center;
 }
-
-/*.work-entry:hover {
-  background-color: #CBCBCB;
-  cursor: pointer;
-  color: red;
-}*/
-
 
 .description:hover {
   cursor: pointer;
 }
 
-/* Tooltip */
+/* --Tooltip-- */
   .icon + .tooltip > .tooltip-inner {
       background-color: #2E3C3D;
       color: #FFFFFF;
@@ -578,42 +500,21 @@ overflow: auto;
       font-size: 12px;
   }
 
-/* Tooltip on bottom */
   .icon + .tooltip.bottom > .tooltip-arrow {
       border-bottom: 5px solid #2E3C3D;
  }
 
-
 #leftCol {
   width: calc(50% - 7.5px);
-  padding-bottom: 30px;
 }
 
 .separator {
   display: flex;
   width: 15px;
-/*  max-height: 30px;*/
 }
-
-/*.trackball  {
-  position: relative;
-  height: 15px;
-  width: 15px;
-  border-radius: 50%;
-  left: -50%;
-  bottom: -20px;
-  display: none;
-}*/
 
 #rightCol {
     width: calc(50% - 7.5px);
-    padding-bottom: 30px;
-/*     display: flex;
-    flex-direction: reverse-row;
-align-items: flex-end;*/
-}
-.emptyDiv {
-/*  height: 100%;*/
 }
 
 .round {
@@ -624,10 +525,29 @@ align-items: flex-end;*/
   padding: 8px 8px 8px 8px;
 }
 
+/*--------Teaching Subjects Section */
 
-/*Subjects section*/
+#teaching {
+  width: 50%;
+  display: none;
+  margin-bottom: 30px;
+  text-align: right;
+  padding-right: 5%;
+}
 
-/*for the d3 Bar Graph */
+#teach-h2 {
+  line-height: 26px;
+  padding: 15px 0 0 10px;
+
+}
+
+#subjectsHead {
+    width: 100%;
+    display: inline-flex;
+    justify-content: center;
+}
+
+/*-------------for the d3 Bar Graph */
 
 .bar {
   display: inline-block;
@@ -651,12 +571,28 @@ align-items: flex-end;*/
 }
 
 
-/*--lets connect section*/
+/*----------Map Section */
 
-#lets-connect {
+#mapDiv {
+  background-color: #AA7552;
+  min-height: 250px;
+}
+
+#map-H2 {
   width: 100%;
-  order:3;
- }
+  padding: 2.5% 5%;
+  background-color: #f3f3f3;
+  order: 0;
+}
+
+#map {
+  width: 100%;
+  height: 100%;
+  min-height: 250px;
+  margin: 5%;
+}
+
+/*----Lets Connect Footer Section */
 
 .connect {
    color: #2E3C3D;
@@ -666,11 +602,31 @@ align-items: flex-end;*/
   text-align: center;
 }
 
+#lets-connect {
+  width: 100%;
+  order: 3;
+ }
 
+/* Order of sections in content and content 2 before media queries */
+
+#skillSection {
+  width: 100%;
+  order: 1;
+}
+
+#projects {
+  width: 100%;
+  order: 2;
+}
+
+#education {
+  width: 100%;
+  order: 3;
+}
 
 #workExperience {
   width: 100%;
-  order:1;
+  order: 1;
 }
 
 #chart {
@@ -679,20 +635,11 @@ align-items: flex-end;*/
 }
 
 #mapDiv {
-  order:3;
+  order: 3;
   width: 100%;
 }
-#header {
-  width: 100%;
-  order:0;
-}
-
-
 
 /* Media queries to handle various device widths */
-
-
-/* Breakpoint for at 1024px pixels for auto margins*/
 
 @media screen and (min-width: 1024px) {
 
@@ -703,12 +650,6 @@ align-items: flex-end;*/
   }
 }
 
-/*@media only screen and (max-width: 1024px) {
-  #lets-connect {
-    margin-top: 5%;
-  }
-}*/
-
 @media only screen and (max-width: 900px) {
   .biopic {
     width: 150px;
@@ -717,7 +658,6 @@ align-items: flex-end;*/
     font-size: 16px;
   }
 }
-
 
 @media only screen and (max-width: 750px) {
   #content, #content2 {
@@ -733,7 +673,6 @@ align-items: flex-end;*/
     display: flex;
     flex-wrap: wrap;
     padding-left: 5%;
-
   }
 
   #skillHeader {
@@ -745,19 +684,18 @@ align-items: flex-end;*/
     padding-left: 2.5%;
   }
 
-  .project-info, div.project-border {
+  .project-info,
+  .project-border {
     width: 50%
+  }
+
+  .project-border {
+    padding: 5%;
   }
 
   #project-brown {
     visibility: visible;
   }
-
-  .project-image {
-  -webkit-border-radius: 15px;
-  -moz-border-radius: 15px;
-  border-radius: 15px;
-}
 
   #education {
     display: flex;
@@ -776,10 +714,12 @@ align-items: flex-end;*/
   .online-education-entry {
     width: 100%;
   }
-#content {
+
+  #content {
     width: 100%
   }
-#content2 {
+
+  #content2 {
     width: 100%
   }
 
@@ -789,26 +729,29 @@ align-items: flex-end;*/
     margin-right: auto;
   }
 
-
-
   #mapDiv {
     display:none;
   }
 
-
-#profile, .biopic  {
+  #profile,
+  .biopic  {
     display: none;
   }
 }
 
-
 @media only screen and (max-width: 450px) {
 
-   #skillHeader, #skillList {
+   #skillHeader,
+   #skillList {
     width: 100%;
   }
-.project-info, div.project-border {
+  .project-info,
+  .project-border {
     width: 100%
+  }
+
+  .project-border {
+    padding: 10%;
   }
 
   #project-brown {
@@ -822,9 +765,4 @@ align-items: flex-end;*/
     width: 100%;
   }
 
-
 }
-
-
-
-

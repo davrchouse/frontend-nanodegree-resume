@@ -3,17 +3,16 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <title>David RC House - Resume</title>
-   <link href='https://fonts.googleapis.com/css?family=Lato:100,300' rel='stylesheet' type='text/css'>
-  <link href='https://fonts.googleapis.com/css?family=Istok+Web:400,700' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Lato:100,300' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Istok+Web:400,700' rel='stylesheet'>
   <script src="js/jQuery.js"></script>
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-   <link href="css/style.css" rel="stylesheet">
-
+  <link href="css/style.css" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.js"></script>
   <script src="js/helper.js"></script>
-  <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places"></script>
+  <script src="http://maps.googleapis.com/maps/api/js?libraries=places"></script>
 </head>
 <body>
   <div id="main" class="flex-box dark-gray clear-content">
@@ -55,18 +54,14 @@
       </ul>
     </div>
   </div>
-
   <!--
   The next line tells the browser where to download the JavaScript file you'll be
   writing. In resumeBuilder.js, you'll be writing code that builds the resume
   dynamically when this website, index.html, is opened.
   -->
   <script src="js/resumeBuilder.js"></script>
-
   <script src="js/d3_barChart.js"></script>
   <script src="js/extra.js"></script>
-
-
   <!--
   These scripts are written in JavaScript. You'll be breaking them down as part of
   a quiz. Essentially, the next few lines are checking to see if you have not
@@ -74,30 +69,15 @@
   of the resume, then that part of the resume does not show up. More on this in the
   course.
   -->
-
- 
-
   <script>
-  $(document).ready(function(){
-      $('.icon').tooltip({title: "Click for More Info", animation: true, placement: "bottom", delay: {show: 2000, hide: 0} });
-   });
-  </script>
-
-  <script type="text/javascript">
     // Notice how all of a sudden there's JavaScript inside this HTML
     // document? You can write JavaScript between <script> tags. At the end of your
     // JavaScript, don't forget the closing script tag with the slash (/).
-
-
     // Also, this is a JavaScript style comment. You can comment in JavaScript with:
-
     //   two slashes for all following characters on a single line, or
-
     /*
         an opening and closing set of slash asterisks for block comments.
     */
-
-
     if(document.getElementsByClassName('flex-item').length === 0) {
       document.getElementById('topContacts').style.display = 'none';
     }
