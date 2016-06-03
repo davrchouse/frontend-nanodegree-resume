@@ -34,9 +34,6 @@ var HTMLskills = '<li class="flex-item"><span class="right">%data%</span></li>';
 var HTMLbrownStars = '<span class="brown-star">%data%<span>'
 var HTMLwhiteDots = '<span class="white-dot">%data%<span>'
 
-var HTMLteachStart = '<h2 id="teach-h2">Teaching Subjects</h2><ul id="subjects"></ul>';
-
-
 var HTMLworkStart = '<div id="work#num#" class="flex-box gray"><div id="leftCol" class="flex-box"></div><div class="separator brown"><div class="trackball dark-gray"></div></div><div id="rightCol" class="flex-box"></div></div>';
 var HTMLworkTitle = '<div id="work#num#_button" class="work-entry" onclick="WorkSectionClick(this)"><div class="dark-gray white-title">%data%</div>';
 var HTMLworkEmployer = '<div class="gray center-text flex-box"><a class="black-title" href="%link%">%data%</a>';
@@ -57,6 +54,7 @@ var HTMLprojectTitle = '<div class="limitLinkLength"><a class="title" href="%lin
 var HTMLprojectDates = '<div class="date-text">%data%</div>';
 var HTMLprojectDescription = '<p><br>%data%</p>';
 var HTMLprojectImage = '<div class="project-border flex-box"><a href="%link%"><img src="%data%" class="project-image"></a><div>';
+var HTMLprojectBreakLine1 = '<div class="breakerOne brown"><div>';
 var HTMLprojectBreakLine = '<div class="breaker brown"><div>';
 
 
@@ -67,6 +65,7 @@ var HTMLschoolDates = '<div class="date-text">%data%</div>';
 var HTMLschoolLocation = '<div class="location-text">%data%</div>';
 var HTMLschoolMajor = '<p class="white-text subtitle">Major: %data%</p>';
 
+var HTMLonlineSchoolStart = '<div class="online-education-entry"></div>';
 var HTMLonlineClasses = '<h3 id="onlineHeader">Online Classes</h3>';
 var HTMLonlineTitle = '<a class="title" href="#">%data%';
 var HTMLonlineSchool = ' - %data%</a>';
@@ -82,6 +81,7 @@ var internationalizeButton = '<button>Internationalize</button>';
 var googleMap = '<div id="map"></div>';
 
 var bookChart = '<div id="chart" class="dark-gray"><div class="chartBox"></div></div>';
+var HTMLteachStart = '<div id="subjectsHead"><h2 id="teach-h2">Teaching Subjects</h2><ul id="subjects"></ul></div>';
 
 
 

@@ -16,8 +16,8 @@ function WorkSectionClick(e) {
     var boxC = "#desc"+number+"C";
         if ( state ) {
           $(boxA).show(400,"swing");
-          $(boxB).delay(500).show(400, "swing");
-          $(boxC).delay(1000).show(400, "swing");
+          $(boxB).delay(250).show(400, "swing");
+          $(boxC).delay(500).show(400, "swing");
         } else {
           $(boxA).hide(400);
           $(boxB).hide(400);

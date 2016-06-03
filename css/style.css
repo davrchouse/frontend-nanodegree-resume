@@ -75,8 +75,7 @@ ul {
 .biopic {
   float: left;
   padding: 5px 10px 10px 10px;
-  width: 200px;
-  display: none;
+  width: 175px;
   margin-right: 20px;
 }
 
@@ -93,10 +92,10 @@ span {
   padding: 0;
 }
 
-.flex-item {
+/*.flex-item {
   padding-top: 5px;
 }
-
+*/
 .center-content {
   padding: 2.5% 5%;
 }
@@ -108,9 +107,7 @@ span {
     height: 40px;
     float: left;
  /*   margin-left: auto;*/
-    padding: 10px;
-    padding-left: 18px;
-
+    padding: 10px 10px 10px 18px;
 }
 
 .icon-left {
@@ -121,10 +118,7 @@ span {
 
 .icon-center {
     height: 40px;
-    float: left;
-    padding: 0 10px 0 80px;
 }
-
 
 /* Classes to change Text or Background Color*/
 
@@ -228,12 +222,13 @@ span {
   font-size: 18px;
   color: white;
   line-height: 28px;
+  margin-bottom: 30px;
 }
 
 /*--conent1 section*/
 
 #content {
-  width: 50%;
+  width: 45%;
   order:1;
   margin-right: 5%;
   margin-bottom: 30px;
@@ -297,23 +292,27 @@ span {
   padding-right: 5%;
 }
 
+
 #teach-h2 {
   line-height: 26px;
 /*  margin-left: auto;*/
-  padding: 15px 0 0 20px;
-  width: 100%;
+  padding: 15px 0 0 10px;
 
 }
 
-#subjects li{
+#subjectsHead {
+    width:100%;
+    display: inline-flex;
+    justify-content: center;
+}
+
+/*#subjects li{
   line-height: 28px;
   color: white;
   text-align: right;
   float: right;
   width: 100%;
  /* clear:right;*/
-}
-
 
 /* Projects Section */
 
@@ -322,7 +321,7 @@ span {
 }
 
 #projects {
-  width: 99%;
+  width: 100%;
   order:2;
   margin-bottom: 40px;
   padding-bottom: 0;}
@@ -343,10 +342,11 @@ span {
   width: 50%;
   background-color: #AA7552;
   order:0;
+  visibility: hidden;
 }
 
 .project-info {
-  width: 50%;
+  width: 100%;
   padding: 2.5% 5%;
   order:0;
 }
@@ -376,37 +376,46 @@ span {
 }
 
 div.project-border {
-  width: 50%;
+  width: 100%;
   background-color: #AA7552;
   padding: 6% 3% 3% 3%;
+  max-height: 
 }
+
 
 div.project-border a {
  height: 100%;
 }
 
 .project-image {
-  max-width: 450px;
-  width: calc((100% - 10px));
-  height: calc((100% - 10px));
-  border: 5px solid #AA7552;
- -webkit-border-radius: 25px;
+   box-shadow: 0 4px 8px 0 rgba(100, 100, 100, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+ /* max-width: 450px;*/
+  width: calc((100% - 20px));
+  height: calc((100% - 20px));
+/*  border: 10px solid black;
+*/ -webkit-border-radius: 25px;
   -moz-border-radius: 25px;
-  border-radius: 25px;
+  border-radius: 40px;
 /*  margin-right: auto;
   margin-left: auto;*/
 }
 
 .project-image:hover {
-  width: 100%;
-  height: 100%;
-  border: none;
+   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.25);
+
 }
 
 
 .breaker {
   width: 100%;
   height: 10px;
+}
+
+
+div.breakerOne {
+  width: 100%;
+  height: 10px;
+  display: block;
 }
 
 /* Education Section */
@@ -451,6 +460,7 @@ overflow: auto;
 #onlineHeader {
   color: #AA7552;
   padding: 30px 0 0 0;
+  width: 100%;
 }
 
 /* Map Section */
@@ -482,7 +492,7 @@ overflow: auto;
 /*--conent2 section*/
 
 #content2 {
-  width: 45%;
+  width: 50%;
   order:2;
   margin-bottom: 30px;
 }
@@ -495,7 +505,7 @@ overflow: auto;
   padding: 2.5%;
 }
 .expHeader {
-  padding: 10px 0 10px 20px;
+  padding: 10px 0 0 20px;
 }
 
 #experience-h2 {
@@ -651,110 +661,132 @@ align-items: flex-end;*/
 
 /* Media queries to handle various device widths */
 
+
+/* Breakpoint for at 1024px pixels for auto margins*/
+
+@media screen and (min-width: 1024px) {
+
+  #main {
+    max-width: 1024px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/*@media only screen and (max-width: 1024px) {
+  #lets-connect {
+    margin-top: 5%;
+  }
+}*/
+
+@media only screen and (max-width: 900px) {
+  .biopic {
+    width: 150px;
+  }
+  .welcome-message {
+    font-size: 16px;
+  }
+}
+
+
 @media only screen and (max-width: 750px) {
-  #skillSection, .project-info, div.project-border {
+  #content, #content2 {
     width: 100%
   }
 
-#content {
-    width: 45%
+  #content {
+    margin-right: 0;
+    margin-bottom: 0;
   }
-#content2 {
+
+  #skillSection {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 5%;
+
+  }
+
+  #skillHeader {
+    width: 15%;
+  }
+
+  #skillList {
+    width: 75%;
+    padding-left: 2.5%;
+  }
+
+  .project-info, div.project-border {
     width: 50%
   }
+
+  #project-brown {
+    visibility: visible;
+  }
+
+  #education {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  #educationHeader {
+    width: 100%;
+  }
+
+  .education-entry {
+    width: 50%;
+  }
+
+  .online-education-entry {
+    width: 100%;
+  }
+#content {
+    width: 100%
+  }
+#content2 {
+    width: 100%
+  }
+
+  #chart {
+    width: 80%;
+  }
+
+
 
   #mapDiv {
     display:none;
   }
 
-  #skillSection { order:3;
-    width: 50%}
-  #Projects { order:2;}
-  #education, # {
-    width: 50%;
-  }
 
-  #skillList {
-    min-height: 500px;
-}
-  #skills li {
-    font-size: 14px;
-    padding: 5px;
-  }
- #lets-connect {
-    margin-top: 10%;
-  }
-  .biopic {
-    width: 150px;
-  }
-
-#profile {
+#profile, .biopic  {
     display: none;
   }
 }
-
 
 
 @media only screen and (max-width: 450px) {
-  #content, #content2 {
+
+   #skillHeader, #skillList {
+    width: 100%;
+  }
+.project-info, div.project-border {
     width: 100%
   }
-/*  .project-info {
-    width: 60%
+
+  #project-brown {
+    visibility: hidden;
   }
-  div.project-border {
-    width: 40%
-  }*/
+  .education-entry {
+    width: 100%;
+  }
+
+  #chart {
+    width: 100%;
+  }
+
+
 }
 
 
-@media only screen and (max-width: 1024px) {
-  #lets-connect {
-    margin-top: 5%;
-  }
-}
 
-@media only screen and (max-width:900px) {
-  .biopic {
-    width: 175px;
-  }
-}
 
-@media only screen and (max-width: 750px) {
-  #lets-connect {
-    margin-top: 10%;
-  }
-  .biopic {
-    width: 150px;
-  }
-
-#profile {
-    display: none;
-  }
-}
-
-/*#map {
-  width: 100%;
-  margin: 5% 5% 15% 5%;
-}
-
-#mapDiv {
-  padding-bottom: 13%;
-}*/
-
-@media only screen and (min-width: 750px) {
-  #skills-h3,
-  .biopic {
-    display: block;
-  }
-}
-
-/* Breakpoint for at 850 pixels for auto margins*/
-@media screen and (min-width: 850px) {
-
-  #main {
-    max-width: 1150px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-}

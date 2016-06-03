@@ -167,27 +167,9 @@ work.display = function() {
         var formattedJobLocation = HTMLworkLocation.replace("%data%", work.jobs[job].location);
         // then concat all into html
         var formattedJobInfo = formattedTitle+formattedEmployer+formattedJobDates+formattedJobLocation;
-        //format each green, red, or blue div with the 3 descriptions for each job
-        // var descript1 = work.jobs[job].orderDescriptions[0];
-        // var descript2 = work.jobs[job].orderDescriptions[1];
-        // var descript3 = work.jobs[job].orderDescriptions[2];
-        // console.log(descript1,descript2,descript3);
-        // descriptVars = {};
-        // descriptVars["formattedJobDescription"+work.jobs[job].orderDescriptions[0]] = HTMLworkDescription1.replace("#num#", "desc"+job+"A").replace("%data%", work.jobs[job].descript[0]);
-        // descriptVars["formattedJobDescription"+work.jobs[job].orderDescriptions[1]] = HTMLworkDescription2.replace("#num#", "desc"+job+"B").replace("%data%", work.jobs[job].descript[1]);
-        // descriptVars["formattedJobDescription"+work.jobs[job].orderDescriptions[2]] = HTMLworkDescription2.replace("#num#", "desc"+job+"B").replace("%data%", work.jobs[job].descript[2]);
-
-
-        // console.log(descriptVars)
         var formattedJobDescription1 = HTMLworkDescription1.replace("#num#", "desc"+job+"A").replace("%color%", work.jobs[job].descriptType[0]).replace("%data%", work.jobs[job].descript[0]);
         var formattedJobDescription2 = HTMLworkDescription2.replace("#num#", "desc"+job+"B").replace("%color%", work.jobs[job].descriptType[1]).replace("%data%", work.jobs[job].descript[1]);
         var formattedJobDescription3 = HTMLworkDescription3.replace("#num#", "desc"+job+"C").replace("%color%", work.jobs[job].descriptType[2]).replace("%data%", work.jobs[job].descript[2]);
-
-        // //append all formatted items to the last added work-entry div
-        // Order1 = "formattedJobDescription"+work.jobs[job].orderDescriptions[0];
-        // Order2 = "formattedJobDescription"+work.jobs[job].orderDescriptions[1];
-        // Order3 = "formattedJobDescription"+work.jobs[job].orderDescriptions[2];
-
 
         var selector = "#work"+job;
         if (job%2 == 0) {
@@ -249,7 +231,7 @@ var projects = {
 };
 // add function to projects to display all data to projects section
 projects.display = function() {
-    $("#projects").append(HTMLprojectBreakLine);
+    $("#projects").append(HTMLprojectBreakLine1);
     for (project in projects.all) {
         //for each project create a new div with project-entry class
         $("#projects").append(HTMLprojectStart);
@@ -343,19 +325,19 @@ education.display = function() {
     $("#education").append(HTMLonlineClasses);
     //for each online School create a new div with all the courses taken
     for (onlineClass in education.onlineCourses) {
-        $("#education").append(HTMLschoolStart);
+        $("#education").append(HTMLonlineSchoolStart);
         var formattedOnlineTitle = HTMLonlineTitle.replace("%data%", education.onlineCourses[onlineClass].school);
         var formattedOnlineSchool = HTMLonlineSchool.replace("%data%", education.onlineCourses[onlineClass].title);
         var formattedOnlineSchoolTitle = formattedOnlineTitle+formattedOnlineSchool;
         var formattedOnlineDates = HTMLonlineDates.replace("%data%", education.onlineCourses[onlineClass].dates);
-        $(".education-entry:last").append(formattedOnlineSchoolTitle,formattedOnlineDates);
-        var selectTitle = $(".education-entry:last").children(".title");
+        $(".online-education-entry:last").append(formattedOnlineSchoolTitle,formattedOnlineDates);
+        var selectTitle = $(".online-education-entry:last").children(".title");
         $(selectTitle).attr("href",education.onlineCourses[onlineClass].url);
        //add the list of all the courses taken at Udacity for the Front End Dev Nanodegree
         for (course in education.onlineCourses[onlineClass].courseList) {
             var formattedOnlineIndivClass = HTMLonlineIndivClass.replace("%data%", education.onlineCourses[onlineClass].courseList[course]);
             var formattedClassWithURL = formattedOnlineIndivClass.replace("%link%", education.onlineCourses[onlineClass].coureURL[course]);
-            $(".education-entry:last").append(formattedClassWithURL);
+            $(".online-education-entry:last").append(formattedClassWithURL);
         };
     };
 };
@@ -368,8 +350,9 @@ function addBookChart () {
     var findChartBox = $("#content2");
     findChartBox.append(bookChart);
     var formattedTeachIcon = HTMLiconCenter.replace("%data%", bio.teaching.icon);
-    $("#chart").append(formattedTeachIcon);
-     $("#chart").append(HTMLteachStart);
+
+    $("#chart").append(HTMLteachStart);
+    $("#subjectsHead").prepend(formattedTeachIcon);
 }
 
 // -----run all the display functions
