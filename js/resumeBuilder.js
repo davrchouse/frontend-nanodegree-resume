@@ -110,6 +110,7 @@ var work = {
             "employer": "Wyzant Tutoring",
             "location": "Bay Area, CA",
             "dates": "2014 - present",
+            "overview": "One on one teaching for students",
             "descript":
                 [
                 "• Strong background to teach a wide range of science and mathematics with special emphasis on project-based and experimental learning models.",
@@ -117,13 +118,15 @@ var work = {
                 "• Currently learning front-end web development at Udacity to create interactive educational content for students."
                 ],
             "descriptType": ["blue","green","red"],
-            "url": "https://www.wyzant.com/"
+            "url": "https://www.wyzant.com/",
+            "icon": "images/icons/sci_ed_tech_icon.svg"
         },
      {
             "title": "Postdoctoral Fellow in Neuroscience",
             "employer": "University of Geneva",
             "location": "Geneva, Swizterland",
             "dates": "2011 - 2013",
+            "overview": "One on one teaching for students",
             "descript":
                 [
                 "• Biological research to understand how the brain encodes reward and motivation during learning.",
@@ -131,13 +134,15 @@ var work = {
                 "• Independently developed unique electrical, optical, and analytical tools (MATLAB) for electrical recordings."
                 ],
             "descriptType": ["blue","green","red"],
-            "url": "http://www.addictionscience.unige.ch/"
+            "url": "http://www.addictionscience.unige.ch/",
+            "icon": "images/icons/postdoc_icon.svg"
         },
      {
             "title": "Graduate Student in Neuroscience",
             "employer": "UC San Diego",
             "location": "San Diego, CA",
             "dates": "2004 - 2010",
+            "overview": "One on one teaching for students",
             "descript":
                 [
                 "• Student instructor for courses at UCSD and Woods Hole Marine Biological Laboratory. Composed outstanding class exams, visual presentations of concepts, and lectures.",
@@ -145,7 +150,8 @@ var work = {
                 "• Discovered mechanisms of learning and information processing at the level of synapses and brain circuits.",
                 ],
              "descriptType": ["green","red","blue"],
-            "url": "http://mcb.berkeley.edu/labs/feldman/index.html"
+            "url": "http://mcb.berkeley.edu/labs/feldman/index.html",
+            "icon": "images/icons/grad_icon.svg"
         }
     ],
     "icon": "images/icons/experience_icon.svg"
@@ -153,8 +159,11 @@ var work = {
 // add function to work object to display all data to work section
 work.display = function() {
     var formattedIcon = HTMLiconLeft.replace("%data%", work.icon);
+    // var formattedIcon2 = HTMLicon.replace("%data%", work.icons[1]);
     var addToElement = $("#workExperience").children(".projectHeader");
     $(addToElement).prepend(formattedIcon);
+    // $(addToElement).append(formattedIcon2);
+
     for (job in work.jobs) {
         //for each job create a new div with work-entry class
         var formattedWorkDiv = HTMLworkStart.replace("#num#", job);
@@ -167,6 +176,9 @@ work.display = function() {
         var formattedJobLocation = HTMLworkLocation.replace("%data%", work.jobs[job].location);
         // then concat all into html
         var formattedJobInfo = formattedTitle+formattedEmployer+formattedJobDates+formattedJobLocation;
+
+        var formattedJobIcon = HTMLicon.replace("#num#", "icon"+job).replace("%data%",work.jobs[job].icon);
+
         var formattedJobDescription1 = HTMLworkDescription1.replace("#num#", "desc"+job+"A").replace("%color%", work.jobs[job].descriptType[0]).replace("%data%", work.jobs[job].descript[0]);
         var formattedJobDescription2 = HTMLworkDescription2.replace("#num#", "desc"+job+"B").replace("%color%", work.jobs[job].descriptType[1]).replace("%data%", work.jobs[job].descript[1]);
         var formattedJobDescription3 = HTMLworkDescription3.replace("#num#", "desc"+job+"C").replace("%color%", work.jobs[job].descriptType[2]).replace("%data%", work.jobs[job].descript[2]);
@@ -175,11 +187,13 @@ work.display = function() {
         if (job%2 == 0) {
             $(selector).children('#rightCol').append(formattedJobInfo);
             $(selector).children('#rightCol').append(formattedJobDescription1);
+            $(selector).children('#leftCol').append(formattedJobIcon);
             $(selector).children('#leftCol').append(formattedJobDescription2);
             $(selector).children('#leftCol').append(formattedJobDescription3);
         } else {
             $(selector).children('#leftCol').append(formattedJobInfo);
             $(selector).children('#leftCol').append(formattedJobDescription1);
+            $(selector).children('#rightCol').append(formattedJobIcon);
             $(selector).children('#rightCol').append(formattedJobDescription2);
             $(selector).children('#rightCol').append(formattedJobDescription3);
         };

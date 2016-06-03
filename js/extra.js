@@ -1,7 +1,6 @@
-// $(document).ready(function(){
-//         $(".description").hide();
-//  });
-
+$(document).ready(function(){
+        $(".description").hide();
+ });
 
 
 var state = true;
@@ -14,7 +13,9 @@ function WorkSectionClick(e) {
     var boxA = "#desc"+number+"A";
     var boxB = "#desc"+number+"B";
     var boxC = "#desc"+number+"C";
+    var icon = "#icon"+number;
         if ( state ) {
+          $(icon).hide();
           $(boxA).show(400,"swing");
           $(boxB).delay(250).show(400, "swing");
           $(boxC).delay(500).show(400, "swing");
@@ -22,6 +23,7 @@ function WorkSectionClick(e) {
           $(boxA).hide(400);
           $(boxB).hide(400);
           $(boxC).hide(400);
+          $(icon).show(400, "swing");
         }
         state = !state;
     }

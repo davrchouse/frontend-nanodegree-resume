@@ -3,13 +3,13 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 width="238.25px" height="109px" viewBox="0 0 238.25 109" enable-background="new 0 0 238.25 109" xml:space="preserve">
-<path opacity="0.6" fill="#1995A5" d="M191.251,74.652c0,2.362-3.597,4.278-8.034,4.278H65.828c-4.434,0-8.034-1.916-8.034-4.278
-	V6.217c0-2.365,3.6-4.279,8.034-4.279h117.39c4.437,0,8.034,1.914,8.034,4.279V74.652z"/>
-<text transform="matrix(1 0 0 1 95.3076 28.9004)" fill="#FFFFFF" font-family="'HelveticaNeue-Thin'" font-size="17.6934">Science</text>
-<path opacity="0.75" fill="#35740C" d="M107.643,90.093c0,1.653-2.826,2.992-6.312,2.992H9.074c-3.488,0-6.314-1.339-6.314-2.992
-	V42.238c0-1.651,2.826-2.991,6.314-2.991h92.257c3.486,0,6.312,1.34,6.312,2.991V90.093z"/>
-<text transform="matrix(1 0 0 1 11.8984 69.9111)" fill="#FFFFFF" font-family="'HelveticaNeue-Thin'" font-size="17.6934">Education</text>
-<path opacity="0.7" fill="#8F4C68" d="M235.489,102.989c0,1.652-2.828,2.993-6.313,2.993h-92.258c-3.485,0-6.311-1.34-6.311-2.993
-	V55.134c0-1.652,2.826-2.991,6.311-2.991h92.258c3.485,0,6.313,1.339,6.313,2.991V102.989z"/>
-<text transform="matrix(1 0 0 1 138.2725 84.3525)" fill="#FFFFFF" font-family="'HelveticaNeue-Thin'" font-size="17.6934">Technology</text>
+<path fill="#2BBDC1" d="M177.038,72.876c0,1.892-2.882,3.428-6.438,3.428H76.529c-3.553,0-6.438-1.536-6.438-3.428V18.034
+	c0-1.895,2.885-3.429,6.438-3.429h94.072c3.556,0,6.438,1.534,6.438,3.429L177.038,72.876L177.038,72.876z"/>
+<text transform="matrix(1 0 0 1 100.1533 36.2119)" fill="#FFFFFF" font-family="'HelveticaNeue-Thin'" font-size="14.1788">Science</text>
+<path fill="#419928" d="M110.038,85.249c0,1.325-2.265,2.397-5.059,2.397H31.048c-2.795,0-5.06-1.072-5.06-2.397V46.9
+	c0-1.323,2.265-2.397,5.06-2.397h73.931c2.794,0,5.059,1.074,5.059,2.397V85.249z"/>
+<text transform="matrix(1 0 0 1 33.312 69.0762)" fill="#FFFFFF" font-family="'HelveticaNeue-Thin'" font-size="14.1788">Education</text>
+<path fill="#CE80A4" d="M212.488,95.584c0,1.323-2.266,2.398-5.059,2.398h-73.932c-2.793,0-5.058-1.073-5.058-2.398v-38.35
+	c0-1.324,2.265-2.396,5.058-2.396h73.932c2.793,0,5.059,1.072,5.059,2.396V95.584L212.488,95.584z"/>
+<text transform="matrix(1 0 0 1 134.584 80.6494)" fill="#FFFFFF" font-family="'HelveticaNeue-Thin'" font-size="14.1788">Technology</text>
 </svg>

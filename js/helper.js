@@ -35,13 +35,15 @@ var HTMLbrownStars = '<span class="brown-star">%data%<span>'
 var HTMLwhiteDots = '<span class="white-dot">%data%<span>'
 
 var HTMLworkStart = '<div id="work#num#" class="flex-box gray"><div id="leftCol" class="flex-box"></div><div class="separator brown"><div class="trackball dark-gray"></div></div><div id="rightCol" class="flex-box"></div></div>';
-var HTMLworkTitle = '<div id="work#num#_button" class="work-entry" onclick="WorkSectionClick(this)"><div class="dark-gray white-title">%data%</div>';
+var HTMLworkTitle = '<div id="work#num#_button" class="work-entry"><div class="dark-gray white-title">%data%</div>';
 var HTMLworkEmployer = '<div class="gray center-text flex-box"><a class="black-title" href="%link%">%data%</a>';
 var HTMLworkDates = '<div class="date-text">%data%</div>';
 var HTMLworkLocation = '<div class="location-text">%data%</div></div></div>';
-var HTMLworkDescription1 = '<div id="#num#" class="description %color% round">%data%</div>';
-var HTMLworkDescription2 = '<div id="#num#" class="description %color% round">%data%</div>';
-var HTMLworkDescription3 = '<div id="#num#" class="description %color% round">%data%</div>';
+// var HTMLworkOverview = '<div id="#num#" class="workOverview">%data%</div>';
+var HTMLworkDescription1 = '<div id="#num#" class="description %color% round" onclick="WorkSectionClick(this)">%data%</div>';
+var HTMLworkDescription2 = '<div id="#num#" class="description %color% round" onclick="WorkSectionClick(this)">%data%</div>';
+var HTMLworkDescription3 = '<div id="#num#" class="description %color% round" onclick="WorkSectionClick(this)">%data%</div>';
+var HTMLicon = '<img id="#num#" src="%data%" class="icon" onclick="WorkSectionClick(this)">';
 
 
 
