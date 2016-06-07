@@ -19,9 +19,9 @@ var HTMLheaderRole = '<span class="brown-text" id="role">%data%</span><hr>';
 
 var HTMLcontactGeneric = '<li class="flex-item"><span class="brown-text">%contact%</span><span class="white-text">%data%</span></li>';
 var HTMLmobile = '<li class="flex-item"><span class="brown-text">mobile</span><span class="phone">%data%</span></li>';
-var HTMLemail = '<li class="flex-item"><span class="brown-text">email</span><a href="#" class="email">%data%</a></li>';
+var HTMLemail = '<li class="flex-item"><span class="brown-text">email</span><a href="mailto:%link%" class="email">%data%</a></li>';
 var HTMLtwitter = '<li class="flex-item"><span class="brown-text">twitter</span><span class="white-text">%data%</span></li>';
-var HTMLgithub = '<li class="flex-item"><span class="brown-text">github</span><a href="#" class="github">%data%</a></li>';
+var HTMLgithub = '<li class="flex-item"><span class="brown-text">github</span><a href="https://github.com/%link%/" class="github">%data%</a></li>';
 var HTMLblog = '<li class="flex-item"><span class="brown-text">blog</span><span class="white-text">%data%</span></li>';
 var HTMLlocation = '<li class="flex-item"><span class="brown-text">location</span><span class="location">%data%</span></li>';
 
@@ -47,7 +47,7 @@ var HTMLworkLocation = '<div class="location-text">%data%</div></div></div>';
 var HTMLworkDescription1 = '<div id="#num#" class="description %color% round" onclick="WorkSectionClick(this)">%data%</div>';
 var HTMLworkDescription2 = '<div id="#num#" class="description %color% round" onclick="WorkSectionClick(this)">%data%</div>';
 var HTMLworkDescription3 = '<div id="#num#" class="description %color% round" onclick="WorkSectionClick(this)">%data%</div>';
-var HTMLicon = '<div id="#num#" class="work-icon" onclick="WorkSectionClick(this)"><img src="%data%" class="icon"><br>click for more...<br><div>';
+var HTMLicon = '<div id="#num#" class="work-icon" onclick="WorkSectionClick(this)"><img src="%data%" class="icon"><br>click for more info...<br><div>';
 
 /* for Project Section*/
 var HTMLprojectStart = '<div class="project-entry flex-box"></div>';
@@ -162,14 +162,14 @@ function initializeMap() {
     var locations = [];
 
     // adds the single location property from bio to the locations array
-    locations.push(bio.contacts.loc);
+    locations.push(bio.contacts.location);
 
     // iterates through school locations and appends each location to
     // the locations array. Note that forEach is used for array iteration
     // as described in the Udacity FEND Style Guide: 
     // https://udacity.github.io/frontend-nanodegree-styleguide/javascript.html#for-in-loop
     education.schools.forEach(function(school){
-      locations.push(school.city);
+      locations.push(school.location);
     });
 
     // iterates through work locations and appends each location to

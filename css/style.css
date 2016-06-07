@@ -63,7 +63,6 @@ a {
 
 a:hover {
   color: #CE80A4;
-  text-decoration: none;
 }
 
 ul {
@@ -404,7 +403,6 @@ span {
 /*--------Education Section */
 
 #education {
-  height: 100%;
   background-color: #2E3C3D;
   margin-bottom: 30px;
   padding-left: 5%;
@@ -448,7 +446,6 @@ span {
 /*--------Work Section */
 
 #workExperience {
-  height: 100%;
   margin-bottom: 30px;
   padding: 2.5%;
 }

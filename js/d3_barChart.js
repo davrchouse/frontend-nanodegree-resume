@@ -1,19 +1,9 @@
  //Modified from a quick demo by https://egghead.io/lessons/d3-get-started-with-d3 -->
 
-var teaching = {
-        "subjects": ["Biology       ", "Molecular Cell Biology", "Chemistry ", "Neurobiology", "Precalculus",
-            "Geometry  ", "Algebra  ", "Trigonometry","Cognitive Psychology", "Elementary Math", "Elementary Science"],
-        "icon": "images/icons/apple_icon.svg"
-};
-
-
-var widthOfBooks = 0;
-
-
 var bookLengths = [];
 
 function makeChart(dataset) {
-    for (var book in dataset) {
+    for (var book =0; book < dataset.length; book++) {
         var eachBooklength = teaching.subjects[book].length;
         bookLengths[book] = eachBooklength;
     }
@@ -51,6 +41,5 @@ function makeChart(dataset) {
 
 
 
-
-makeChart(teaching.subjects);
+  makeChart(teaching.subjects);
 
